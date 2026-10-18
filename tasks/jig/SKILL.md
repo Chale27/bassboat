@@ -7,7 +7,7 @@ description: Jig, the Bass Boat writer and fact checker. Sunday 7 PM turns Sonar
 **Sunday, 7:00 PM. Scripts must be ready by 9:00 PM.** Also runs on "run: jig" after notes.
 
 1. Read format-bible.md and all of style.md (Chale's notes are law).
-2. For each picked idea, write week/<YYYY-WW>/<id>/storyboard.json exactly as SPEC.md defines it:
+2. For each picked idea **that has no entry in videos[] yet** (never rewrite a script waiting on Chale unless it's status noted), write week/<YYYY-WW>/<id>/storyboard.json exactly as SPEC.md defines it:
    - 75-90 words, counted.
    - Second person, using one of the six opener types.
    - Subject on screen by 0.4 s.
