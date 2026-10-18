@@ -1,0 +1,21 @@
+{
+  "name": "bass-boat-render",
+  "private": true,
+  "type": "module",
+  "description": "Spinner render pipeline for the Bass Boat crew (HyperFrames + GSAP, code-drawn art)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "voice": "node voice.mjs",
+    "queue": "node queue.mjs",
+    "style-tests": "node style-tests.mjs",
+    "test": "node tests/run-unit.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.14.2",
+    "hyperframes": "0.8.172",
+    "three": "0.170.0"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "id": "w2026-43-7-smallmouth-facts",
+  "format": "ten-facts",
+  "title": "10 Smallmouth Bass Facts in Under 30 Seconds",
+  "hook": "Ten smallmouth bass facts in under thirty seconds.",
+  "style": "clay",
+  "script": "Ten smallmouth bass facts in under thirty seconds. Its bars run vertical, not sideways. Its upper jaw never reaches past the eye. Micropterus is Greek for small fin. Its name honors a French mineralogist. Anglers call it brownie or bronze bass. One male may spawn with several females. A nest can hold up to 10,000 eggs. Warm water can hatch eggs in two to three days. Dad guards the nest up to a month. World record: 11 pounds 15 ounces, from 1955. Which one did you already know?",
+  "lines": [
+    {
+      "text": "Ten smallmouth bass",
+      "shot": 1
+    },
+    {
+      "text": "facts in under",
+      "shot": 1
+    },
+    {
+      "text": "thirty seconds.",
+      "shot": 1
+    },
+    {
+      "text": "Its bars run vertical,",
+      "shot": 2
+    },
+    {
+      "text": "not sideways.",
+      "shot": 2
+    },
+    {
+      "text": "Its upper jaw",
+      "shot": 3
+    },
+    {
+      "text": "never reaches past",
+      "shot": 3
+    },
+    {
+      "text": "the eye.",
+      "shot": 3
+    },
+    {
+      "text": "Micropterus is Greek",
+      "shot": 4
+    },
+    {
+      "text": "for small fin.",
+      "shot": 4
+    },
+    {
+      "text": "Its name honors",
+      "shot": 5
+    },
+    {
+      "text": "a French mineralogist.",
+      "shot": 5
+    },
+    {
+      "text": "Anglers call it",
+      "shot": 6
+    },
+    {
+      "text": "brownie or bronze bass.",
+      "shot": 6
+    },
+    {
+      "text": "One male may",
+      "shot": 7
+    },
+    {
+      "text": "spawn with several females.",
+      "shot": 7
+    },
+    {
+      "text": "A nest can",
+      "shot": 8
+    },
+    {
+      "text": "hold up to",
+      "shot": 8
+    },
+    {
+      "text": "10,000 eggs.",
+      "shot": 8
+    },
+    {
+      "text": "Warm water can",
+      "shot": 9
+    },
+    {
+      "text": "hatch eggs in",
+      "shot": 9
+    },
+    {
+      "text": "two to three days.",
+      "shot": 9
+    },
+    {
+      "text": "Dad guards the",
+      "shot": 10
+    },
+    {
+      "text": "nest up to",
+      "shot": 10
+    },
+    {
+      "text": "a month.",
+      "shot": 10
+    },
+    {
+      "text": "World record:",
+      "shot": 11
+    },
+    {
+      "text": "11 pounds 15 ounces,",
+      "shot": 11
+    },
+    {
+      "text": "from 1955.",
+      "shot": 11
+    },
+    {
+      "text": "Which one did",
+      "shot": 12
+    },
+    {
+      "text": "you already know?",
+      "shot": 12
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "Smallmouth bass already on screen at frame 0; stopwatch starts at 0.0 s; title flashes for 0.5 s over the fish (no separate title card).",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 2,
+      "scene": "underwater",
+      "subject": "bass:smallmouth",
+      "action": "Vertical bars light up along the flank; a sideways stripe is crossed out.",
+      "camera": "pan",
+      "counter": 1,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 3,
+      "scene": "studio",
+      "subject": "bass:jaw",
+      "action": "Jaw line stops short of the eye; dotted guide line.",
+      "camera": "pan",
+      "counter": 2,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 4,
+      "scene": "studio",
+      "subject": "bass:fin",
+      "action": "Greek letters morph into the words SMALL FIN over the dorsal fin.",
+      "camera": "pan",
+      "counter": 3,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 5,
+      "scene": "studio",
+      "subject": "mineral",
+      "action": "A clay mineral crystal labeled DOLOMIEU spins next to the fish.",
+      "camera": "pan",
+      "counter": 4,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 6,
+      "scene": "dock",
+      "subject": "bass:smallmouth",
+      "action": "Name tags pop up: BROWNIE, BRONZE BASS.",
+      "camera": "pan",
+      "counter": 5,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 7,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "One male over a nest; several females visit in turn.",
+      "camera": "pan",
+      "counter": 6,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 8,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Egg counter on the nest climbs to 10,000.",
+      "camera": "pan",
+      "counter": 7,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 9,
+      "scene": "underwater",
+      "subject": "bass:eggs",
+      "action": "Thermometer at mid-70s F; eggs crack open on a 2-3 day clock.",
+      "camera": "pan",
+      "counter": 8,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 10,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Calendar pages flip toward one month while the male holds station.",
+      "camera": "pan",
+      "counter": 9,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 11,
+      "scene": "studio",
+      "subject": "bass:record",
+      "action": "Scale reads 11 lb 15 oz; a 1955 date tag swings.",
+      "camera": "pan",
+      "counter": 10,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 12,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "Camera settles on the bass; stopwatch freezes; the question appears as captions. Cut to black on the last word.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 2.4
+    }
+  ],
+  "ending": "question",
+  "question": "Which one did you already know?",
+  "claims": [
+    {
+      "text": "Smallmouth bass have dark vertical bands instead of a horizontal stripe.",
+      "source_id": "src-tpwd-smb-bars"
+    },
+    {
+      "text": "A smallmouth's upper jaw never extends beyond the eye.",
+      "source_id": "src-tpwd-smb-jaw"
+    },
+    {
+      "text": "Micropterus is Greek for 'small fin'.",
+      "source_id": "src-tpwd-smb-greek"
+    },
+    {
+      "text": "The species name dolomieu honors French mineralogist Dolomieu.",
+      "source_id": "src-tpwd-smb-dolomieu"
+    },
+    {
+      "text": "Smallmouth are also called brownie and bronze bass.",
+      "source_id": "src-tpwd-smb-names"
+    },
+    {
+      "text": "A male smallmouth may spawn with several females on one nest.",
+      "source_id": "src-tpwd-smb-females"
+    },
+    {
+      "text": "A smallmouth nest may hold as many as 10,000 eggs.",
+      "source_id": "src-tpwd-smb-eggs"
+    },
+    {
+      "text": "In mid-70s F water, smallmouth eggs can hatch in 2-3 days.",
+      "source_id": "src-tpwd-smb-hatch"
+    },
+    {
+      "text": "Male smallmouth guard the nest for up to a month.",
+      "source_id": "src-tpwd-smb-guard"
+    },
+    {
+      "text": "The world-record smallmouth, 11 lb 15 oz, was caught at Dale Hollow in 1955.",
+      "source_id": "src-twra-record"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

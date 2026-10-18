@@ -1,0 +1,223 @@
+{
+  "id": "w2026-43-3-swallowed-hook",
+  "format": "what-happens-if",
+  "title": "What Happens If a Fish Swallows Your Hook?",
+  "hook": "Inside a fish's throat, your swallowed hook can lodge deep in the esophagus.",
+  "style": "clay",
+  "script": "Inside a fish's throat, your swallowed hook can lodge deep in the esophagus. Researchers call deep hooking perhaps the single biggest factor in whether a released fish dies. Rip it out, and in a study on bluegill, a sunfish cousin of bass, 44 percent died within ten days. When the line was cut instead, deaths dropped to about 12 percent, and most fish shed the hook on their own. So when your hook is swallowed, don't dig. Cut the line and let it go.",
+  "lines": [
+    {
+      "text": "Inside a fish's throat,",
+      "shot": 1
+    },
+    {
+      "text": "your swallowed hook",
+      "shot": 1
+    },
+    {
+      "text": "can lodge deep",
+      "shot": 1
+    },
+    {
+      "text": "in the esophagus.",
+      "shot": 1
+    },
+    {
+      "text": "Researchers call deep",
+      "shot": 2
+    },
+    {
+      "text": "hooking perhaps the",
+      "shot": 2
+    },
+    {
+      "text": "single biggest factor",
+      "shot": 2
+    },
+    {
+      "text": "in whether a",
+      "shot": 2
+    },
+    {
+      "text": "released fish dies.",
+      "shot": 2
+    },
+    {
+      "text": "Rip it out,",
+      "shot": 3
+    },
+    {
+      "text": "and in a",
+      "shot": 3
+    },
+    {
+      "text": "study on bluegill,",
+      "shot": 3
+    },
+    {
+      "text": "a sunfish cousin",
+      "shot": 3
+    },
+    {
+      "text": "of bass,",
+      "shot": 3
+    },
+    {
+      "text": "44 percent died",
+      "shot": 3
+    },
+    {
+      "text": "within ten days.",
+      "shot": 3
+    },
+    {
+      "text": "When the line",
+      "shot": 4
+    },
+    {
+      "text": "was cut instead,",
+      "shot": 4
+    },
+    {
+      "text": "deaths dropped to",
+      "shot": 4
+    },
+    {
+      "text": "about 12 percent,",
+      "shot": 4
+    },
+    {
+      "text": "and most fish",
+      "shot": 4
+    },
+    {
+      "text": "shed the hook",
+      "shot": 4
+    },
+    {
+      "text": "on their own.",
+      "shot": 4
+    },
+    {
+      "text": "So when your",
+      "shot": 5
+    },
+    {
+      "text": "hook is swallowed,",
+      "shot": 5
+    },
+    {
+      "text": "don't dig.",
+      "shot": 5
+    },
+    {
+      "text": "Cut the line",
+      "shot": 5
+    },
+    {
+      "text": "and let it go.",
+      "shot": 5
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "cutaway",
+      "subject": "bass:throat",
+      "action": "Inside view of a fish's throat at frame 0: a hook sits lodged deep past the mouth, line trailing out.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 4.4
+    },
+    {
+      "n": 2,
+      "scene": "cutaway",
+      "subject": "bass:throat",
+      "action": "Same shot pulls back slightly; labels show gills and gut close to the hook.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 5.2
+    },
+    {
+      "n": 3,
+      "scene": "studio",
+      "subject": "bluegill",
+      "action": "Hard cut in: a bluegill beside a bass on a lab bench; pliers yank a hook; a tally of fish goes 44 percent red after a 10-day clock.",
+      "camera": "orbit",
+      "counter": null,
+      "est_seconds": 7.2
+    },
+    {
+      "n": 4,
+      "scene": "studio",
+      "subject": "bluegill",
+      "action": "Scissors snip the line instead; tally turns mostly green (about 12 percent red); a hook drops out of a fish's mouth on its own.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 7.4
+    },
+    {
+      "n": 5,
+      "scene": "boat",
+      "subject": "angler",
+      "action": "Angler's hands snip the line at the lure; the bass slides back into the water and kicks away. Cut to black on the last word.",
+      "camera": "static",
+      "counter": null,
+      "est_seconds": 5.2
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "A swallowed hook can lodge in the esophagus.",
+      "source_id": "src-fobert-esoph"
+    },
+    {
+      "text": "Deep hooking is perhaps the single most important factor in injury and death of released fish.",
+      "source_id": "src-fobert-determinant"
+    },
+    {
+      "text": "Bluegill and black bass are both in the sunfish family, Centrarchidae.",
+      "source_id": "src-serc-bluegill"
+    },
+    {
+      "text": "Largemouth bass are in the sunfish family, Centrarchidae.",
+      "source_id": "src-afs-sunfish"
+    },
+    {
+      "text": "In the bluegill study, 44 percent of deeply hooked fish died within 10 days when the hook was removed.",
+      "source_id": "src-fobert-removed"
+    },
+    {
+      "text": "When the line was cut, mortality was about 12.5 percent after 10 days.",
+      "source_id": "src-fobert-cut"
+    },
+    {
+      "text": "Most line-cut fish had expelled the hook within 10 days.",
+      "source_id": "src-fobert-expel"
+    },
+    {
+      "text": "Cutting the line is a more effective release method than removing the hook for deeply hooked fish.",
+      "source_id": "src-fobert-conclusion"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "w2026-43-4-nest-guard",
+  "format": "what-happens-if",
+  "title": "What Happens When You Pull a Bass Off Its Nest?",
+  "hook": "In about ten minutes, predators can eat half a bass nest once the guard is gone.",
+  "style": "blueprint",
+  "script": "In about ten minutes, predators can eat half a bass nest once the guard is gone. In spring, the male fans out the nest with his tail, then guards the eggs and fry alone for weeks. Bluegill and rock bass circle, waiting. Pull him off the bed, and they rush in. Release him fast, and he can still lose part of his brood. Keep him, and the whole nest is lost. So if you fish the spawn, every minute he's in your hands costs him fry.",
+  "lines": [
+    {
+      "text": "In about ten minutes,",
+      "shot": 1
+    },
+    {
+      "text": "predators can eat",
+      "shot": 1
+    },
+    {
+      "text": "half a bass",
+      "shot": 1
+    },
+    {
+      "text": "nest once the",
+      "shot": 1
+    },
+    {
+      "text": "guard is gone.",
+      "shot": 1
+    },
+    {
+      "text": "In spring,",
+      "shot": 2
+    },
+    {
+      "text": "the male fans",
+      "shot": 2
+    },
+    {
+      "text": "out the nest",
+      "shot": 2
+    },
+    {
+      "text": "with his tail,",
+      "shot": 2
+    },
+    {
+      "text": "then guards the",
+      "shot": 2
+    },
+    {
+      "text": "eggs and fry",
+      "shot": 2
+    },
+    {
+      "text": "alone for weeks.",
+      "shot": 2
+    },
+    {
+      "text": "Bluegill and rock",
+      "shot": 3
+    },
+    {
+      "text": "bass circle, waiting.",
+      "shot": 3
+    },
+    {
+      "text": "Pull him off",
+      "shot": 3
+    },
+    {
+      "text": "the bed,",
+      "shot": 3
+    },
+    {
+      "text": "and they rush in.",
+      "shot": 3
+    },
+    {
+      "text": "Release him fast,",
+      "shot": 4
+    },
+    {
+      "text": "and he can",
+      "shot": 4
+    },
+    {
+      "text": "still lose part",
+      "shot": 4
+    },
+    {
+      "text": "of his brood.",
+      "shot": 4
+    },
+    {
+      "text": "Keep him,",
+      "shot": 4
+    },
+    {
+      "text": "and the whole",
+      "shot": 4
+    },
+    {
+      "text": "nest is lost.",
+      "shot": 4
+    },
+    {
+      "text": "So if you",
+      "shot": 5
+    },
+    {
+      "text": "fish the spawn,",
+      "shot": 5
+    },
+    {
+      "text": "every minute he's",
+      "shot": 5
+    },
+    {
+      "text": "in your hands",
+      "shot": 5
+    },
+    {
+      "text": "costs him fry.",
+      "shot": 5
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Male bass hovering over a round nest of eggs at frame 0; a 10:00 timer appears and starts.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 5.2
+    },
+    {
+      "n": 2,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "The male sweeps the nest with his tail; the female drifts off to deeper water; eggs become a cloud of fry under him.",
+      "camera": "orbit",
+      "counter": null,
+      "est_seconds": 6.8
+    },
+    {
+      "n": 3,
+      "scene": "underwater",
+      "subject": "bluegill",
+      "action": "Bluegill and rock bass circle at the edge; a lure lands, the male strikes and is pulled up out of frame; the predators dart in.",
+      "camera": "pan",
+      "counter": null,
+      "est_seconds": 5.4
+    },
+    {
+      "n": 4,
+      "scene": "cutaway",
+      "subject": "bass:nest",
+      "action": "Line-art nest diagram: eggs disappear in chunks while the male is away; label RELEASED: PART LOST, then KEPT: ALL LOST.",
+      "camera": "static",
+      "counter": null,
+      "est_seconds": 6.8
+    },
+    {
+      "n": 5,
+      "scene": "boat",
+      "subject": "angler",
+      "action": "Angler's hands lower the male back into the water; the timer on screen freezes. Cut to black on the last word.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 4.8
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "With the guarding male gone, predators eat about half the brood within ten minutes.",
+      "source_id": "src-oc-tenmin"
+    },
+    {
+      "text": "Male bass fan out the nest with their tails.",
+      "source_id": "src-afs-fan"
+    },
+    {
+      "text": "The female leaves and the male guards the nest.",
+      "source_id": "src-afs-guard"
+    },
+    {
+      "text": "The male protects the brood for several weeks after hatching.",
+      "source_id": "src-afs-weeks"
+    },
+    {
+      "text": "Nest predators include bluegill and rock bass.",
+      "source_id": "src-afs-predators"
+    },
+    {
+      "text": "Catch-and-release of a guarding male still causes partial brood loss while he is off the nest.",
+      "source_id": "src-oc-cr"
+    },
+    {
+      "text": "Keeping a guarding male destroys the whole brood.",
+      "source_id": "src-oc-harvest"
+    },
+    {
+      "text": "Brood predators eat the fry quickly while the male is off the nest.",
+      "source_id": "src-oc-tenmin"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

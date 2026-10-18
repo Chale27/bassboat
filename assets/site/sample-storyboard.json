@@ -1,0 +1,37 @@
+{
+  "id": "w2026-43-1-deep-water-bass",
+  "format": "what-happens-if",
+  "title": "What Happens When You Reel Up a Bass From 30 Feet?",
+  "hook": "If you reel a bass up from 30 feet down, its body can't keep up.",
+  "style": "clay",
+  "script": "If you reel a bass up from 30 feet down, its body can't keep up. A bass floats using a gas-filled swim bladder. Deep down, water pressure squeezes that gas small. Pull the fish up fast and the pressure drops, so the gas expands. The bladder swells, pushes on the stomach, and the fish can't swim back down. Anglers call it barotrauma. The fix is slow: bring deep fish up gently, and use a descender to send them home. Now you know why pros take their time.",
+  "lines": [
+    {"text": "If you reel a bass up from 30 feet down,", "shot": 1},
+    {"text": "its body can't keep up.", "shot": 1},
+    {"text": "A bass floats using a gas-filled swim bladder.", "shot": 2},
+    {"text": "Deep down, water pressure squeezes that gas small.", "shot": 2},
+    {"text": "Pull the fish up fast and the pressure drops,", "shot": 3},
+    {"text": "so the gas expands.", "shot": 3},
+    {"text": "The bladder swells and the fish can't swim back down.", "shot": 4},
+    {"text": "Anglers call it barotrauma.", "shot": 4},
+    {"text": "Bring deep fish up gently, and use a descender.", "shot": 5},
+    {"text": "Now you know why pros take their time.", "shot": 5}
+  ],
+  "shots": [
+    {"n": 1, "scene": "boat", "subject": "angler", "action": "Clay angler leans back, rod bent hard toward deep water", "camera": "push-in", "counter": null, "est_seconds": 4.5},
+    {"n": 2, "scene": "cutaway", "subject": "bass", "action": "Bass turns transparent; small swim bladder glows inside", "camera": "orbit", "counter": null, "est_seconds": 6},
+    {"n": 3, "scene": "underwater", "subject": "bass", "action": "Bass rises past depth markers, bladder balloons with each mark", "camera": "pan", "counter": null, "est_seconds": 6.5},
+    {"n": 4, "scene": "cutaway", "subject": "bass", "action": "Swollen bladder presses the stomach; fish bobs at the surface", "camera": "static", "counter": null, "est_seconds": 5.5},
+    {"n": 5, "scene": "boat", "subject": "lure:descender", "action": "Weighted clip carries the bass gently back to the bottom", "camera": "pull-out", "counter": null, "est_seconds": 6}
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {"text": "A bass floats using a gas-filled swim bladder.", "source_id": "src-sample-swim-bladder"},
+    {"text": "Rapid pressure drop makes swim bladder gas expand (barotrauma).", "source_id": "src-sample-barotrauma"},
+    {"text": "Descender devices return deep-caught fish to depth.", "source_id": "src-sample-descender"},
+    {"text": "This claim has no cached source, so the dashboard flags it.", "source_id": "src-sample-missing"}
+  ],
+  "voice": {"provider": "elevenlabs", "voice": null},
+  "log": [{"step": "jig", "minutes": 6, "cost_usd": 0.04, "at": "2026-10-18T19:12:00-05:00"}]
+}

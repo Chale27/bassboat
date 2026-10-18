@@ -1,0 +1,224 @@
+{
+  "id": "w2026-43-2-ten-bass-facts",
+  "format": "ten-facts",
+  "title": "10 Bass Facts in Under 30 Seconds",
+  "hook": "Ten bass facts in under thirty seconds.",
+  "style": "isometric",
+  "script": "Ten bass facts in under thirty seconds. A largemouth's upper jaw reaches past its eye. A smallmouth's jaw never extends beyond the eye. Smallmouth wear vertical bars, not a side stripe. Bass belong to the sunfish family. Males fan out nests with their tails. Then the male guards the eggs alone. A swim bladder controls how a bass floats. Bigger largemouth will eat smaller bass. They feed hardest in low light. The record largemouth weighed twenty-two pounds, four ounces. Which one did you already know?",
+  "lines": [
+    {
+      "text": "Ten bass facts in under thirty seconds.",
+      "shot": 1
+    },
+    {
+      "text": "A largemouth's upper jaw reaches past its eye.",
+      "shot": 2
+    },
+    {
+      "text": "A smallmouth's jaw never extends beyond the eye.",
+      "shot": 3
+    },
+    {
+      "text": "Smallmouth wear vertical bars, not a side stripe.",
+      "shot": 4
+    },
+    {
+      "text": "Bass belong to the sunfish family.",
+      "shot": 5
+    },
+    {
+      "text": "Males fan out nests with their tails.",
+      "shot": 6
+    },
+    {
+      "text": "Then the male guards the eggs alone.",
+      "shot": 7
+    },
+    {
+      "text": "A swim bladder controls how a bass floats.",
+      "shot": 8
+    },
+    {
+      "text": "Bigger largemouth will eat smaller bass.",
+      "shot": 9
+    },
+    {
+      "text": "They feed hardest in low light.",
+      "shot": 10
+    },
+    {
+      "text": "The record largemouth weighed twenty-two pounds, four ounces.",
+      "shot": 11
+    },
+    {
+      "text": "Which one did you already know?",
+      "shot": 12
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "bass swims across the stage",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 2.4
+    },
+    {
+      "n": 2,
+      "scene": "studio",
+      "subject": "bass jaw",
+      "action": "bass opens its mouth wide in a strike",
+      "camera": "push-in",
+      "counter": 1,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 3,
+      "scene": "studio",
+      "subject": "bass:smallmouth jaw",
+      "action": "smallmouth hovers",
+      "camera": "static",
+      "counter": 2,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 4,
+      "scene": "studio",
+      "subject": "bass:smallmouth",
+      "action": "smallmouth turns to show its bars",
+      "camera": "pan",
+      "counter": 3,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 5,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "bass turns",
+      "camera": "orbit",
+      "counter": 4,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 6,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "male bass fans the nest and dives down",
+      "camera": "push-in",
+      "counter": 5,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 7,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "male bass hovers over the nest",
+      "camera": "orbit",
+      "counter": 6,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 8,
+      "scene": "cutaway",
+      "subject": "bass swim bladder",
+      "action": "swim bladder swells",
+      "camera": "push-in",
+      "counter": 7,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 9,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "largemouth lunges to bite",
+      "camera": "static",
+      "counter": 8,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 10,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "bass cruises past in dim light",
+      "camera": "pan",
+      "counter": 9,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 11,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "largemouth hovers proudly",
+      "camera": "pull-out",
+      "counter": 10,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 12,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "bass turns toward the camera",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 2.4
+    }
+  ],
+  "ending": "question",
+  "question": "Which one did you already know?",
+  "claims": [
+    {
+      "text": "A largemouth's upper jaw reaches past its eye.",
+      "source_id": "src-tpwd-lmb-jaw"
+    },
+    {
+      "text": "A smallmouth's jaw never extends beyond the eye.",
+      "source_id": "src-tpwd-smb-jaw"
+    },
+    {
+      "text": "Smallmouth wear vertical bars, not a side stripe.",
+      "source_id": "src-tpwd-smb-bars"
+    },
+    {
+      "text": "Bass belong to the sunfish family.",
+      "source_id": "src-afs-sunfish"
+    },
+    {
+      "text": "Males fan out nests with their tails.",
+      "source_id": "src-afs-fan"
+    },
+    {
+      "text": "Then the male guards the eggs alone.",
+      "source_id": "src-afs-guard"
+    },
+    {
+      "text": "A swim bladder controls how a bass floats.",
+      "source_id": "src-agfc-bladder"
+    },
+    {
+      "text": "Bigger largemouth will eat smaller bass.",
+      "source_id": "src-tpwd-lmb-cannibal"
+    },
+    {
+      "text": "They feed hardest in low light.",
+      "source_id": "src-vadwr-lowlight"
+    },
+    {
+      "text": "The record largemouth weighed twenty-two pounds, four ounces.",
+      "source_id": "src-strib-weight"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "jig",
+      "minutes": 0,
+      "cost_usd": 0,
+      "at": "2026-10-18T17:00:00Z"
+    }
+  ]
+}

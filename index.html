@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bass Boat Crew</title>
+<meta name="description" content="Dashboard for the Bass Boat agent crew: Sunday approvals, final pass, crew stations, pipeline and scorecard.">
+<meta name="theme-color" content="#1d4a3c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bass Boat">
+<link rel="icon" href="assets/site/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/site/icon.svg">
+<link rel="manifest" href="assets/site/manifest.webmanifest">
+<style>
+:root{
+  --bg:#f3efe6; --card:#fffdf8; --card2:#eef3ee; --ink:#13261f; --muted:#56685f; --line:#d5ddd3;
+  --green:#1f4d3a; --green2:#2f6b3f; --lake:#2a6f8f; --lake2:#123a4d; --sun:#e8742c; --sun2:#f6b25c;
+  --ok:#2f7d4a; --okbg:#e2f1e6; --bad:#b4442a; --badbg:#fbe6df; --warn:#9a6a00; --warnbg:#fbf0d4; --runbg:#e0eef5; --idlebg:#ecefec;
+  --sky1:#2a5a4a; --sky2:#e8742c; --sky3:#f8c27a; --tree:#163b2f; --water1:#2a6f8f; --water2:#123a4d; --hull:#0f2620;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a1714; --card:#11231e; --card2:#0f1f26; --ink:#e7efe9; --muted:#9db0a6; --line:#24413a;
+  --green:#7fc39a; --green2:#5aa577; --lake:#6fb6d6; --lake2:#9fd2e8; --sun:#f08a45; --sun2:#f6b25c;
+  --ok:#7fd49a; --okbg:#173326; --bad:#ff9b80; --badbg:#3a1d16; --warn:#f3c560; --warnbg:#342913; --runbg:#13303d; --idlebg:#1a2a26;
+  --sky1:#0d241e; --sky2:#b85a24; --sky3:#e79a52; --tree:#071510; --water1:#174a60; --water2:#0a2330; --hull:#030a08;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0a1714; --card:#11231e; --card2:#0f1f26; --ink:#e7efe9; --muted:#9db0a6; --line:#24413a;
+  --green:#7fc39a; --green2:#5aa577; --lake:#6fb6d6; --lake2:#9fd2e8; --sun:#f08a45; --sun2:#f6b25c;
+  --ok:#7fd49a; --okbg:#173326; --bad:#ff9b80; --badbg:#3a1d16; --warn:#f3c560; --warnbg:#342913; --runbg:#13303d; --idlebg:#1a2a26;
+  --sky1:#0d241e; --sky2:#b85a24; --sky3:#e79a52; --tree:#071510; --water1:#174a60; --water2:#0a2330; --hull:#030a08;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px calc(40px + env(safe-area-inset-bottom))}
+a{color:var(--lake)}
+h1,h2,h3{line-height:1.2;margin:0}
+h2{font-size:20px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+h2 .count{font-size:13px;font-weight:600;color:var(--muted);background:var(--idlebg);border-radius:99px;padding:2px 9px}
+h3{font-size:16px}
+section{margin-top:28px}
+.sub{color:var(--muted);font-size:13px;margin:4px 0 12px}
+.hero{position:relative;color:#fff8ee;overflow:hidden}
+.hero svg{display:block;width:100%;height:clamp(170px,22vw,260px)}
+.hero .txt{position:absolute;left:16px;right:16px;top:calc(14px + env(safe-area-inset-top));display:flex;justify-content:space-between;align-items:flex-start;gap:12px;max-width:1088px;margin:0 auto}
+.hero h1{font-size:30px;letter-spacing:.5px;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.hero .meta{font-size:13px;opacity:.95;text-shadow:0 1px 4px rgba(0,0,0,.5);margin-top:4px}
+.hero nav a{color:#fff8ee;background:rgba(10,30,24,.45);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:6px 12px;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
+.banner{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:13px;margin-top:12px;overflow-wrap:anywhere}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0}
+.grid{display:grid;gap:12px}
+@media (min-width:720px){.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.g3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.empty{color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.tag{font-size:12px;font-weight:600;border-radius:99px;padding:2px 9px;background:var(--card2);color:var(--lake);border:1px solid var(--line)}
+.id{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);overflow-wrap:anywhere}
+.hook{font-weight:600;border-left:3px solid var(--sun);padding-left:10px;margin:10px 0}
+.script{white-space:pre-wrap;background:var(--card2);border-radius:10px;padding:10px 12px;margin:8px 0;font-size:14px}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700;margin:12px 0 6px}
+.shots{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.shots li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:8px;align-items:start;background:var(--card2);border-radius:10px;padding:8px 10px;font-size:13px}
+.shots .n{font-weight:800;color:var(--sun);font-size:16px}
+.shots .s{font-weight:600}
+.shots .a{color:var(--muted)}
+.shots .t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.claims{margin:0;padding-left:18px;font-size:13px}
+.claims li{margin-bottom:6px}
+.claims .src{display:block;color:var(--muted)}
+.miss{color:var(--bad);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 14px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid var(--line);background:var(--card2);color:var(--ink)}
+.btn.go{background:var(--green2);border-color:var(--green2);color:#fff}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:#1b0f05}
+.btn.no{color:var(--bad);border-color:var(--bad);background:transparent}
+.btn:active{transform:translateY(1px)}
+.tick{font-size:12px;color:var(--muted);margin-top:8px}
+.badge{font-size:12px;font-weight:700;border-radius:99px;padding:2px 10px;white-space:nowrap}
+.st-ok{background:var(--okbg);color:var(--ok)} .st-needs_you{background:var(--warnbg);color:var(--warn)}
+.st-running{background:var(--runbg);color:var(--lake)} .st-idle{background:var(--idlebg);color:var(--muted)}
+.st-failed{background:var(--badbg);color:var(--bad)} .st-waiting{background:var(--warnbg);color:var(--warn)}
+.st-started{background:var(--runbg);color:var(--lake)} .st-done{background:var(--okbg);color:var(--ok)}
+.st-active{background:var(--okbg);color:var(--ok)} .st-testing{background:var(--runbg);color:var(--lake)} .st-retired{background:var(--idlebg);color:var(--muted)}
+.station{display:flex;flex-direction:column;gap:6px}
+.station .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.station .emo{font-size:26px;line-height:1}
+.station .role{color:var(--muted);font-size:13px}
+.station .sched{font-size:13px}
+.station .sum{font-size:14px;margin:4px 0}
+.log{list-style:none;margin:0;padding:0;font-size:12px;color:var(--muted)}
+.log li{padding:3px 0;border-top:1px solid var(--line)}
+.log time{font-weight:600;color:var(--ink);margin-right:6px}
+.station .btns{margin-top:auto;padding-top:6px}
+.pipe{display:flex;flex-wrap:wrap;gap:8px}
+.pipe .p{flex:1 1 88px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-width:0}
+.pipe .p b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.pipe .p span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.pipe .p.zero b{color:var(--muted);opacity:.6}
+.rows{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rows li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:4px;min-width:0}
+.rows .line{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;font-weight:700}
+td.num,th.num{text-align:right}
+.met{color:var(--ok);font-weight:700} .missed{color:var(--bad);font-weight:700} .na{color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.met .dot{background:var(--ok)} .missed .dot{background:var(--bad)}
+.spark{display:block;width:100%;max-width:220px;height:44px}
+.spark .ln{fill:none;stroke:var(--lake);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.spark .ar{fill:var(--lake);opacity:.14}
+.spark .tg{stroke:var(--sun);stroke-width:1;stroke-dasharray:3 3}
+.misses{display:flex;gap:4px;margin:6px 0}
+.misses i{width:22px;height:8px;border-radius:4px;background:var(--idlebg);border:1px solid var(--line)}
+.misses i.on{background:var(--bad);border-color:var(--bad)}
+.rule{font-size:13px;background:var(--card2);border-radius:10px;padding:8px 12px;margin-bottom:12px}
+video{display:block;width:100%;max-width:360px;aspect-ratio:9/16;background:#000;border-radius:12px;margin:8px 0}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+footer{margin-top:36px;color:var(--muted);font-size:12px;text-align:center}
+.theme{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:420px){.sc-base{display:none}}
+</style>
+</head>
+<body>
+<header class="hero" aria-label="Bass Boat">
+  <svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".62" style="stop-color:var(--sky2)"/><stop offset=".72" style="stop-color:var(--sky3)"/>
+      </linearGradient>
+      <linearGradient id="hwater" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--water1)"/><stop offset="1" style="stop-color:var(--water2)"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="122" fill="url(#hsky)"/>
+    <circle cx="300" cy="122" r="30" fill="#ffd79a" opacity=".95"/>
+    <path d="M0 108 L22 96 L38 104 L60 88 L80 100 L104 84 L126 98 L150 90 L176 102 L204 86 L228 100 L252 94 L270 104 L330 104 L350 92 L372 100 L400 90 L400 122 L0 122Z" style="fill:var(--tree)"/>
+    <rect y="122" width="400" height="48" fill="url(#hwater)"/>
+    <g stroke="#f6b25c" stroke-linecap="round" opacity=".6">
+      <path d="M270 130 H330" stroke-width="3"/><path d="M280 139 H320" stroke-width="2.5"/><path d="M290 148 H310" stroke-width="2"/>
+    </g>
+    <g style="fill:var(--hull)">
+      <path d="M58 124 H150 L140 136 H72 Z"/>
+      <path d="M118 124 V114 H128 L132 124Z"/>
+      <circle cx="96" cy="113" r="4"/><path d="M92 117 H100 L101 124 H91Z"/>
+      <path d="M98 116 L136 92" stroke="var(--hull)" stroke-width="1.5" fill="none" style="stroke:var(--hull)"/>
+    </g>
+    <path d="M136 92 Q150 110 156 132" fill="none" stroke="#fff3df" stroke-width=".7" opacity=".7"/>
+  </svg>
+  <div class="txt">
+    <div>
+      <h1>🎣 Bass Boat</h1>
+      <div class="meta" id="meta">Loading crew…</div>
+    </div>
+    <nav><a href="run/">Run page</a></nav>
+  </div>
+</header>
+<main class="wrap" id="app">
+  <div id="banner"></div>
+  <section id="sec-approve"><h2>Sunday approval</h2><p class="sub">Scripts waiting for you. Approve, send notes, or reject. Each button opens a prefilled GitHub ticket; tap Submit there.</p><div id="approve"></div></section>
+  <section id="sec-final"><h2>Final pass</h2><p class="sub">Rendered videos waiting for your last look before Cast schedules them.</p><div id="final"></div></section>
+  <section id="sec-crew"><h2>Crew stations</h2><p class="sub">Run now opens a "run: &lt;crew&gt;" ticket. Anchor starts it within 15 minutes (8 AM-11 PM).</p><div id="crew" class="grid g3"></div></section>
+  <section id="sec-pipe"><h2>Pipeline</h2><p class="sub">Videos per status, then everything scheduled or posted.</p><div id="pipe"></div></section>
+  <section id="sec-score"><h2>Scorecard</h2><p class="sub">Targets vs the latest week vs the baseline.</p><div id="score"></div></section>
+  <section id="sec-formats"><h2>Formats</h2><div id="formats"></div></section>
+  <section id="sec-tickets"><h2>Tickets</h2><p class="sub">Status Anchor wrote back for each ticket. Only tickets opened by @Chale27 are honored.</p><div id="tickets"></div></section>
+  <footer>Bass Boat crew · data from <span id="src">crew.json</span> · <button class="theme" id="themeBtn" type="button">Toggle theme</button></footer>
+</main>
+<script>
+"use strict";
+const GH_REPO = "Chale27/bassboat", GH_OWNER = "Chale27", TZ = "America/Chicago";
+const CREW_ORDER = ["scale", "sonar", "jig", "spinner", "cast", "anchor"];
+const CREW_EMOJI = { scale: "📊", sonar: "📡", jig: "✍️", spinner: "🎬", cast: "🎣", anchor: "⚓" };
+const STATUSES = ["idea", "scripted", "awaiting_script", "approved", "noted", "rendered", "awaiting_final", "scheduled", "posted", "rejected", "retired"];
+const RETIRE_AFTER = 5;
+
+/* ---------- tiny safe DOM helpers (text only, never innerHTML of data) ---------- */
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  if (attrs) for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v;
+    else if (k === "text") e.textContent = String(v);
+    else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? "" : String(v));
+  }
+  for (const c of kids.flat()) { if (c == null || c === false) continue; e.append(c instanceof Node ? c : String(c)); }
+  return e;
+}
+function svg(tag, attrs) { const e = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, String(v)); return e; }
+const str = v => (v == null ? "" : String(v));
+const arr = v => (Array.isArray(v) ? v : []);
+const obj = v => (v && typeof v === "object" && !Array.isArray(v) ? v : {});
+
+/* only relative, same-origin paths (no scheme, no //, no .., no leading /) */
+function safePath(p) {
+  if (typeof p !== "string" || !p || p.length > 300) return null;
+  if (!/^[A-Za-z0-9._\-\/]+$/.test(p) || p.startsWith("/") || p.includes("//") || p.split("/").includes("..")) return null;
+  try { return new URL(p, location.href).origin === location.origin ? p : null; } catch (e) { return null; }
+}
+function safeHttp(u) { try { const x = new URL(String(u)); return x.protocol === "https:" || x.protocol === "http:" ? x.href : null; } catch (e) { return null; } }
+function bust(p) { return p + (p.includes("?") ? "&" : "?") + "v=" + Date.now(); }
+async function getJson(p) { const r = await fetch(bust(p), { cache: "no-store" }); if (!r.ok) throw new Error(p + " → HTTP " + r.status); return r.json(); }
+
+function when(s, opts) {
+  if (!s) return "never";
+  const d = new Date(s); if (isNaN(d)) return str(s);
+  return d.toLocaleString("en-US", Object.assign({ timeZone: TZ, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }, opts || {}));
+}
+function pct(v, d) { return typeof v === "number" && isFinite(v) ? (v * 100).toFixed(d == null ? 0 : d) + "%" : "–"; }
+
+/* ---------- GitHub ticket links ---------- */
+const FOOT = "\n\n---\nOpened from the Bass Boat dashboard. Anchor picks this up within 15 minutes (8 AM-11 PM) and closes the ticket. Only tickets opened by @" + GH_OWNER + " are honored.";
+function issueUrl(title, body) { return "https://github.com/" + GH_REPO + "/issues/new?title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body); }
+function ticketBtn(cls, label, title, body) { return h("a", { class: "btn " + cls, href: issueUrl(title, body), target: "_blank", rel: "noopener", title: title }, label); }
+const bodies = {
+  approve: id => "Script approved for " + id + ". Spinner renders it next." + FOOT,
+  notes: id => "Notes for Jig on " + id + " (these are appended to style.md, then Jig rewrites):\n\n- What to change:\n- What to keep:\n- Tone / pacing:\n" + FOOT,
+  reject: id => "Reason for rejecting " + id + ":\n\n" + FOOT,
+  final: id => "Final approved for " + id + ". Cast schedules it for the next post slot." + FOOT,
+  run: c => "Start " + c + " now." + FOOT,
+};
+function videoButtons(v, stage) {
+  const id = str(v.id);
+  const b = h("div", { class: "btns" },
+    stage === "final" ? ticketBtn("go", "✓ Approve final", "final: " + id, bodies.final(id)) : ticketBtn("go", "✓ Approve", "approve: " + id, bodies.approve(id)),
+    ticketBtn("", "✎ Notes", "notes: " + id, bodies.notes(id)),
+    ticketBtn("no", "✕ Reject", "reject: " + id, bodies.reject(id)));
+  return [b, ticketLine(id)];
+}
+function ticketLine(key) {
+  const t = obj(DATA.tickets)[key]; if (!t || !t.status) return null;
+  return h("div", { class: "tick" }, h("span", { class: "badge st-" + cls(t.status), text: t.status }), " ", issueRef(t.issue), t.at ? " · " + when(t.at) : "", t.note ? " · " + str(t.note) : "");
+}
+function issueRef(n) {
+  const num = Number(n); if (!Number.isInteger(num) || num <= 0) return "";
+  return h("a", { href: "https://github.com/" + GH_REPO + "/issues/" + num, target: "_blank", rel: "noopener", text: "#" + num });
+}
+const cls = s => str(s).replace(/[^a-z_]/gi, "");
+
+/* ---------- state ---------- */
+let DATA = {}, SOURCES = new Map();
+const qs = new URLSearchParams(location.search);
+const dataParam = qs.get("data");
+const DATA_PATH = dataParam ? safePath(dataParam) : "crew.json";
+/* sources live beside the crew file: crew.json -> sources.json, sample-crew.json -> sample-sources.json; ?sources= overrides */
+function sourcesPath() {
+  const sp = qs.get("sources"); if (sp) return safePath(sp);
+  if (!DATA_PATH) return "sources.json";
+  const i = DATA_PATH.lastIndexOf("/"), dir = DATA_PATH.slice(0, i + 1), base = DATA_PATH.slice(i + 1);
+  return dir + (base.endsWith("crew.json") ? base.replace(/crew\.json$/, "sources.json") : "sources.json");
+}
+
+async function boot() {
+  const banner = document.getElementById("banner");
+  if (dataParam && !DATA_PATH) { banner.append(h("div", { class: "banner", text: "Ignored ?data= (only relative same-origin .json paths are allowed). Showing crew.json." })); }
+  const path = DATA_PATH || "crew.json";
+  document.getElementById("src").textContent = path;
+  if (path !== "crew.json") banner.append(h("div", { class: "banner", text: "Preview mode: showing " + path + ", not the live crew.json." }));
+  try { DATA = obj(await getJson(path)); }
+  catch (e) { document.getElementById("meta").textContent = "Couldn't load " + path; banner.append(h("div", { class: "banner", text: "Couldn't load " + path + ": " + e.message })); DATA = {}; }
+  const sp = sourcesPath();
+  if (sp) { try { arr(await getJson(sp)).forEach(s => { if (s && s.id) SOURCES.set(String(s.id), s); }); } catch (e) { /* no source cache yet */ } }
+  render();
+}
+
+function render() {
+  const videos = arr(DATA.videos).filter(v => v && typeof v === "object");
+  document.getElementById("meta").textContent = "Week " + (str(DATA.week) || "–") + " · last sync " + when(DATA.updatedAt);
+  renderApprove(videos.filter(v => v.status === "awaiting_script"));
+  renderFinal(videos.filter(v => v.status === "awaiting_final"));
+  renderCrew();
+  renderPipe(videos);
+  renderScore(videos);
+  renderFormats();
+  renderTickets();
+}
+function fill(id, ...nodes) { const el = document.getElementById(id); el.replaceChildren(...nodes.flat().filter(Boolean)); return el; }
+function setCount(secId, n) { const h2 = document.querySelector("#" + secId + " h2"); let c = h2.querySelector(".count"); if (!c) { c = h("span", { class: "count" }); h2.append(c); } c.textContent = String(n); }
+function tags(v) { return h("div", { class: "tags" }, v.format ? h("span", { class: "tag", text: v.format }) : null, v.style ? h("span", { class: "tag", text: v.style }) : null, v.week ? h("span", { class: "tag", text: "week " + v.week }) : null); }
+
+/* ---------- Sunday approval ---------- */
+function renderApprove(list) {
+  setCount("sec-approve", list.length);
+  if (!list.length) return fill("approve", h("div", { class: "empty", text: "Nothing waiting. Jig drops new scripts here Sunday evening." }));
+  const wrap = h("div", { class: "grid g2" });
+  list.forEach(v => {
+    const body = h("div", null, h("p", { class: "sub", text: "Loading storyboard…" }));
+    wrap.append(h("article", { class: "card" }, h("h3", { text: str(v.title) || str(v.id) }), h("div", { class: "id", text: str(v.id) }), tags(v), body, videoButtons(v, "script")));
+    loadStoryboard(v, body);
+  });
+  fill("approve", wrap);
+}
+async function loadStoryboard(v, box) {
+  const p = safePath(v.storyboard);
+  if (!p) { box.replaceChildren(h("p", { class: "miss", text: "No valid storyboard path on this video." })); return; }
+  let sb;
+  try { sb = obj(await getJson(p)); } catch (e) { box.replaceChildren(h("p", { class: "miss", text: "Storyboard not found: " + p })); return; }
+  const shots = arr(sb.shots), claims = arr(sb.claims);
+  const total = shots.reduce((a, s) => a + (Number(s && s.est_seconds) || 0), 0);
+  const words = str(sb.script).trim().split(/\s+/).filter(Boolean).length;
+  const kids = [];
+  if (sb.style && sb.style !== v.style) kids.push(h("div", { class: "tags" }, h("span", { class: "tag", text: "storyboard style: " + sb.style })));
+  if (sb.hook) kids.push(h("p", { class: "hook", text: str(sb.hook) }));
+  kids.push(h("div", { class: "label", text: "Script · " + words + " words" }), h("div", { class: "script", text: str(sb.script) || "(no script yet)" }));
+  if (sb.ending === "question" && sb.question) kids.push(h("p", { class: "sub" }, "Ends on a question: ", h("b", { text: str(sb.question) })));
+  kids.push(h("div", { class: "label", text: "Shot list · " + shots.length + " shots · ~" + total.toFixed(1) + "s" }));
+  kids.push(h("ol", { class: "shots" }, shots.map(s => {
+    s = obj(s);
+    return h("li", null, h("span", { class: "n", text: str(s.n) }),
+      h("span", null, h("span", { class: "s", text: [s.scene, s.subject, s.camera].filter(Boolean).map(str).join(" · ") }), s.counter ? " #" + s.counter : "",
+        s.action ? h("span", { class: "a" }, h("br"), str(s.action)) : null),
+      h("span", { class: "t", text: (Number(s.est_seconds) || 0) + "s" }));
+  })));
+  kids.push(h("div", { class: "label", text: "Claims · " + claims.length }));
+  if (!claims.length) kids.push(h("p", { class: "miss", text: "No claims listed. Every factual sentence needs a source." }));
+  else kids.push(h("ul", { class: "claims" }, claims.map(c => {
+    c = obj(c); const s = SOURCES.get(str(c.source_id)), url = s && safeHttp(s.url);
+    return h("li", null, str(c.text), s
+      ? h("span", { class: "src" }, "↳ ", str(s.publisher) || "source", ": ", url ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", text: str(s.title) || url }) : str(s.title))
+      : h("span", { class: "src miss", text: "↳ source " + (str(c.source_id) || "(none)") + " not in sources.json" }));
+  })));
+  box.replaceChildren(...kids);
+}
+
+/* ---------- Final pass ---------- */
+function renderFinal(list) {
+  setCount("sec-final", list.length);
+  if (!list.length) return fill("final", h("div", { class: "empty", text: "No renders waiting. Spinner posts finished videos here after its nightly run." }));
+  fill("final", h("div", { class: "grid g2" }, list.map(v => {
+    const src = safePath(v.final), poster = safePath(v.poster);
+    const player = src ? h("video", { controls: true, playsinline: true, preload: "metadata", poster: poster, src: src }) : h("p", { class: "miss", text: "No final.mp4 path yet." });
+    return h("article", { class: "card" }, h("h3", { text: str(v.title) || str(v.id) }), h("div", { class: "id", text: str(v.id) }), tags(v), player, videoButtons(v, "final"));
+  })));
+}
+
+/* ---------- Crew ---------- */
+function renderCrew() {
+  const crew = obj(DATA.crew);
+  const ids = CREW_ORDER.concat(Object.keys(crew).filter(k => !CREW_ORDER.includes(k)));
+  fill("crew", ids.map(id => {
+    const c = obj(crew[id]), state = str(c.state) || "idle";
+    const log = arr(c.log).filter(x => x && x.note).slice().sort((a, b) => str(b.at).localeCompare(str(a.at))).slice(0, 3);
+    return h("article", { class: "card station" },
+      h("div", { class: "top" }, h("div", null, h("h3", null, h("span", { class: "emo", "aria-hidden": "true" }, CREW_EMOJI[id] || "🐟"), " ", str(c.name) || id), h("div", { class: "role", text: str(c.role) })),
+        h("span", { class: "badge st-" + cls(state), text: state.replace("_", " ") })),
+      h("div", { class: "sched" }, "🕒 ", str(c.schedule) || "–"),
+      h("div", { class: "role", text: "Last run: " + when(c.lastRunAt) }),
+      h("p", { class: "sum", text: str(c.lastSummary) || "No summary yet." }),
+      log.length ? h("ul", { class: "log" }, log.map(x => h("li", null, h("time", { text: when(x.at, { weekday: undefined }) }), str(x.note)))) : null,
+      h("div", { class: "btns" }, ticketBtn("sun", "▶ Run now", "run: " + id, bodies.run(str(c.name) || id))),
+      ticketLine(id));
+  }));
+}
+
+/* ---------- Pipeline ---------- */
+function renderPipe(videos) {
+  const counts = {}; videos.forEach(v => { const s = str(v.status) || "unknown"; counts[s] = (counts[s] || 0) + 1; });
+  const keys = STATUSES.concat(Object.keys(counts).filter(k => !STATUSES.includes(k)));
+  const live = videos.filter(v => v.status === "scheduled" || v.status === "posted");
+  fill("pipe",
+    h("div", { class: "pipe" }, keys.map(k => h("div", { class: "p" + (counts[k] ? "" : " zero") }, h("b", { text: String(counts[k] || 0) }), h("span", { text: k.replace(/_/g, " ") })))),
+    h("div", { class: "label", text: "Scheduled & posted · " + live.length }),
+    live.length ? h("ul", { class: "rows" }, live.map(v => {
+      const p = obj(v.post), tt = p.tiktok && obj(p.tiktok), ig = p.instagram && obj(p.instagram);
+      const ttUrl = tt && safeHttp(tt.url), igUrl = ig && safeHttp(ig.url);
+      return h("li", null,
+        h("div", { class: "line" }, h("b", { text: str(v.title) || str(v.id) }), h("span", { class: "badge st-" + (v.status === "posted" ? "done" : "started"), text: str(v.status) })),
+        h("div", { class: "id", text: str(v.id) }),
+        h("div", { class: "line" },
+          h("span", null, "TikTok: ", tt ? h("span", { class: "tag", text: str(tt.mode) || "?" }) : "not yet", tt && tt.postedAt ? " " + when(tt.postedAt) : "", ttUrl ? [" ", h("a", { href: ttUrl, target: "_blank", rel: "noopener noreferrer", text: "open" })] : null),
+          h("span", null, "Instagram: ", ig ? h("span", { class: "tag", text: ig.trial ? "trial" : "full" }) : "not yet", igUrl ? [" ", h("a", { href: igUrl, target: "_blank", rel: "noopener noreferrer", text: "open" })] : null)));
+    })) : h("div", { class: "empty", text: "Nothing scheduled or posted yet." }));
+}
+
+/* ---------- Scorecard ---------- */
+function metrics() {
+  const t = obj(obj(DATA.settings).targets), cad = Number(obj(DATA.settings).cadence_per_week) || 7;
+  const num = (v, d) => (typeof v === "number" ? v : d);
+  return [
+    { k: "my_minutes_per_video", label: "My minutes / video", tgt: num(t.my_minutes_per_video, 4), op: "<=", fmt: v => v.toFixed(1) + " min" },
+    { k: "usd_per_video", label: "USD / video", tgt: num(t.usd_per_video, 1), op: "<", fmt: v => "$" + v.toFixed(2) },
+    { k: "videos_shipped", label: "Videos shipped", tgt: cad, op: ">=", fmt: v => String(v) },
+    { k: "first_pass_approval", label: "First-pass approval", tgt: num(t.first_pass_approval, .7), op: ">=", fmt: v => pct(v) },
+    { k: "hold3s", label: "3s hold", tgt: num(t.hold3s, .6), op: ">=", fmt: v => pct(v) },
+    { k: "avg_watch", label: "Avg watch", tgt: num(t.avg_watch, .7), op: ">=", fmt: v => pct(v) },
+    { k: "saves_per_view", label: "Saves / views", tgt: num(t.saves_per_view, .05), op: ">=", fmt: v => pct(v, 1) },
+    { k: "shares_saves_per_1k", label: "Shares+saves / 1k", tgt: num(t.shares_saves_per_1k, 10), op: ">=", fmt: v => v.toFixed(1) },
+  ];
+}
+function meets(m, v) { return m.op === "<=" ? v <= m.tgt : m.op === "<" ? v < m.tgt : v >= m.tgt; }
+function valCell(m, v, judge) {
+  if (typeof v !== "number" || !isFinite(v)) return h("td", { class: "num na", text: "–" });
+  if (!judge) return h("td", { class: "num", text: m.fmt(v) });
+  const ok = meets(m, v);
+  return h("td", { class: "num " + (ok ? "met" : "missed"), title: ok ? "met" : "missed" }, h("span", { class: "dot" }), m.fmt(v));
+}
+function renderScore(videos) {
+  const sc = obj(DATA.scorecard), weeks = arr(sc.weeks).filter(w => w && typeof w === "object");
+  const latest = weeks.slice().sort((a, b) => str(a.week).localeCompare(str(b.week))).pop() || null;
+  const base = sc.baseline && typeof sc.baseline === "object" ? sc.baseline : null;
+  const ms = metrics();
+  const table = h("div", { class: "card tw" }, h("table", null,
+    h("thead", null, h("tr", null, h("th", { text: "Metric" }), h("th", { class: "num", text: "Target" }), h("th", { class: "num", text: latest ? "Week " + str(latest.week) : "Latest" }), h("th", { class: "num sc-base", text: "Baseline" }))),
+    h("tbody", null, ms.map(m => h("tr", null, h("td", { text: m.label }), h("td", { class: "num na", text: (m.op === ">=" ? "≥ " : m.op === "<" ? "< " : "≤ ") + m.fmt(m.tgt) }),
+      valCell(m, latest && latest[m.k], true), (() => { const c = valCell(m, base && base[m.k], false); c.classList.add("sc-base"); return c; })())))));
+  const kids = [table];
+  if (!latest) kids.push(h("p", { class: "sub", text: "No weeks scored yet. Scale writes the first row Sunday 5:00 PM." }));
+  const withCurve = videos.filter(v => v.stats && arr(v.stats.curve).length >= 2);
+  const withStats = videos.filter(v => v.stats && typeof v.stats === "object");
+  kids.push(h("div", { class: "label", text: "Per-video retention · " + withStats.length }));
+  if (!withStats.length) kids.push(h("div", { class: "empty", text: "No video stats yet. Scale pulls them nightly after posts go live." }));
+  else kids.push(h("div", { class: "grid g3" }, withStats.map(v => {
+    const s = obj(v.stats), views = Number(s.views) || 0;
+    const per1k = views ? ((Number(s.shares) || 0) + (Number(s.saves) || 0)) / views * 1000 : null;
+    return h("article", { class: "card" }, h("h3", { text: str(v.title) || str(v.id) }), h("div", { class: "id", text: str(v.id) }),
+      withCurve.includes(v) ? sparkline(s.curve, obj(obj(DATA.settings).targets).hold3s) : h("p", { class: "sub", text: "No retention curve." }),
+      h("div", { class: "line tags" },
+        h("span", { class: "tag", text: views.toLocaleString() + " views" }),
+        h("span", { class: "tag", text: "hold 3s " + pct(s.hold3s) }),
+        h("span", { class: "tag", text: "avg watch " + pct(s.avg_watch) }),
+        h("span", { class: "tag", text: "saves/view " + (views ? pct((Number(s.saves) || 0) / views, 1) : "–") }),
+        h("span", { class: "tag", text: "sh+sv/1k " + (per1k == null ? "–" : per1k.toFixed(1)) })));
+  })));
+  fill("score", kids);
+}
+function sparkline(curve, hold) {
+  const pts = arr(curve).map(p => [Number(p && p[0]), Number(p && p[1])]).filter(p => isFinite(p[0]) && isFinite(p[1]));
+  const big = Math.max(...pts.map(p => p[1])) > 1.5; /* pct as 0-100 or 0-1 */
+  const W = 220, H = 44, maxX = Math.max(...pts.map(p => p[0])) || 1;
+  const X = x => (x / maxX) * (W - 4) + 2, Y = y => H - 3 - Math.max(0, Math.min(1, big ? y / 100 : y)) * (H - 6);
+  const d = pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+  const s = svg("svg", { class: "spark", viewBox: "0 0 " + W + " " + H, preserveAspectRatio: "none", role: "img", "aria-label": "Retention curve, " + pts.length + " points, ends at " + Math.round(big ? pts[pts.length - 1][1] : pts[pts.length - 1][1] * 100) + "% at " + pts[pts.length - 1][0] + "s" });
+  s.append(svg("path", { class: "ar", d: d + " L" + X(pts[pts.length - 1][0]).toFixed(1) + " " + (H - 3) + " L" + X(pts[0][0]).toFixed(1) + " " + (H - 3) + " Z" }));
+  if (typeof hold === "number") { const y = Y(big ? hold * 100 : hold); s.append(svg("line", { class: "tg", x1: 2, x2: W - 2, y1: y, y2: y })); }
+  s.append(svg("path", { class: "ln", d: d }));
+  return h("div", null, s, h("div", { class: "id", text: "retention over " + maxX + "s · dashed line = 3s hold target" }));
+}
+
+/* ---------- Formats ---------- */
+function renderFormats() {
+  const f = arr(DATA.formats).filter(x => x && typeof x === "object");
+  fill("formats",
+    h("div", { class: "rule" }, "Rule: a format that misses its targets ", h("b", { text: RETIRE_AFTER + " weeks in a row" }), " is retired. A hit resets the count to 0."),
+    f.length ? h("div", { class: "grid g2" }, f.map(x => {
+      const m = Math.max(0, Number(x.misses_in_row) || 0);
+      return h("article", { class: "card" },
+        h("div", { class: "line", style: "display:flex;justify-content:space-between;gap:8px;align-items:center" }, h("h3", { text: str(x.id) }), h("span", { class: "badge st-" + cls(x.status), text: str(x.status) || "?" })),
+        h("div", { class: "misses", "aria-label": m + " of " + RETIRE_AFTER + " misses" }, Array.from({ length: RETIRE_AFTER }, (_, i) => h("i", { class: i < m ? "on" : "" }))),
+        h("div", { class: "sub", text: m + " miss" + (m === 1 ? "" : "es") + " in a row" + (x.status === "retired" ? " · retired" : m >= RETIRE_AFTER ? " · due to retire" : " · " + (RETIRE_AFTER - m) + " left before retirement") }));
+    })) : h("div", { class: "empty", text: "No formats defined." }));
+}
+
+/* ---------- Tickets ---------- */
+function renderTickets() {
+  const t = obj(DATA.tickets), keys = Object.keys(t).sort((a, b) => str(obj(t[b]).at).localeCompare(str(obj(t[a]).at)));
+  setCount("sec-tickets", keys.length);
+  if (!keys.length) return fill("tickets", h("div", { class: "empty", text: "No tickets yet. Buttons above open them on GitHub." }));
+  fill("tickets", h("ul", { class: "rows" }, keys.map(k => {
+    const x = obj(t[k]);
+    return h("li", null, h("div", { class: "line" }, h("span", { class: "badge st-" + cls(x.status), text: str(x.status) || "?" }), h("b", { class: "id", style: "color:var(--ink)", text: k }), issueRef(x.issue)),
+      h("div", { class: "line sub", style: "margin:0" }, when(x.at), x.note ? " · " + str(x.note) : ""));
+  })));
+}
+
+/* ---------- theme toggle (per-viewer convenience only) ---------- */
+(function () {
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("bb-theme"); if (t === "light" || t === "dark") root.dataset.theme = t; } catch (e) {}
+  document.getElementById("themeBtn").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("bb-theme", root.dataset.theme); } catch (e) {}
+  });
+})();
+boot();
+</script>
+</body>
+</html>

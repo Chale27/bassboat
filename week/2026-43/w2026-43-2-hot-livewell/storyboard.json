@@ -1,0 +1,223 @@
+{
+  "id": "w2026-43-2-hot-livewell",
+  "format": "what-happens-if",
+  "title": "What Happens to Bass in a Hot Livewell?",
+  "hook": "This is what happens when you pack five bass into a livewell on a summer day.",
+  "style": "blueprint",
+  "script": "This is what happens when you pack five bass into a livewell on a summer day. Warm water holds less oxygen, and warm bass burn through it faster. In Texas tests with no aeration, oxygen hit stressful levels in 12 to 15 minutes, and was projected to turn lethal by 30. Worse, an oxygen-starved bass can look fine at weigh-in, then die a day or two after release. So cool the tank with ice and feed it pure oxygen. Cooler water holds more of it.",
+  "lines": [
+    {
+      "text": "This is what",
+      "shot": 1
+    },
+    {
+      "text": "happens when you",
+      "shot": 1
+    },
+    {
+      "text": "pack five bass",
+      "shot": 1
+    },
+    {
+      "text": "into a livewell",
+      "shot": 1
+    },
+    {
+      "text": "on a summer day.",
+      "shot": 1
+    },
+    {
+      "text": "Warm water holds",
+      "shot": 2
+    },
+    {
+      "text": "less oxygen,",
+      "shot": 2
+    },
+    {
+      "text": "and warm bass",
+      "shot": 2
+    },
+    {
+      "text": "burn through it faster.",
+      "shot": 2
+    },
+    {
+      "text": "In Texas tests",
+      "shot": 3
+    },
+    {
+      "text": "with no aeration,",
+      "shot": 3
+    },
+    {
+      "text": "oxygen hit stressful",
+      "shot": 3
+    },
+    {
+      "text": "levels in 12",
+      "shot": 3
+    },
+    {
+      "text": "to 15 minutes,",
+      "shot": 3
+    },
+    {
+      "text": "and was projected",
+      "shot": 3
+    },
+    {
+      "text": "to turn lethal",
+      "shot": 3
+    },
+    {
+      "text": "by 30.",
+      "shot": 3
+    },
+    {
+      "text": "Worse, an oxygen-starved",
+      "shot": 4
+    },
+    {
+      "text": "bass can look",
+      "shot": 4
+    },
+    {
+      "text": "fine at weigh-in,",
+      "shot": 4
+    },
+    {
+      "text": "then die a",
+      "shot": 4
+    },
+    {
+      "text": "day or two",
+      "shot": 4
+    },
+    {
+      "text": "after release.",
+      "shot": 4
+    },
+    {
+      "text": "So cool the",
+      "shot": 5
+    },
+    {
+      "text": "tank with ice",
+      "shot": 5
+    },
+    {
+      "text": "and feed it",
+      "shot": 5
+    },
+    {
+      "text": "pure oxygen.",
+      "shot": 5
+    },
+    {
+      "text": "Cooler water holds",
+      "shot": 5
+    },
+    {
+      "text": "more of it.",
+      "shot": 5
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "boat",
+      "subject": "bass",
+      "action": "Bass already dropping into a livewell at frame 0; four more follow. Labeled callout: 5 FISH. Water-temp readout climbs.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 5.0
+    },
+    {
+      "n": 2,
+      "scene": "cutaway",
+      "subject": "livewell:oxygen",
+      "action": "Line-art cross-section of the livewell: oxygen bubbles thin out as the thermometer rises; each bass's gills pump faster.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 4.4
+    },
+    {
+      "n": 3,
+      "scene": "cutaway",
+      "subject": "livewell:oxygen-meter",
+      "action": "Oxygen meter needle falls into a red STRESS band at 12-15 min, then a timer marks 30 min LETHAL (projected).",
+      "camera": "static",
+      "counter": null,
+      "est_seconds": 8.0
+    },
+    {
+      "n": 4,
+      "scene": "dock",
+      "subject": "bass",
+      "action": "Hard cut in: weigh-in scale, bass looks fine; release splash, then a calendar flips one to two days and the bass sinks still.",
+      "camera": "pan",
+      "counter": null,
+      "est_seconds": 5.8
+    },
+    {
+      "n": 5,
+      "scene": "boat",
+      "subject": "livewell",
+      "action": "Ice drops into the livewell, an oxygen line feeds fine bubbles, the meter swings back to green. Cut to black on the last word.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 5.4
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "Warm water holds less oxygen than cool water.",
+      "source_id": "src-tpwd-lw-warm"
+    },
+    {
+      "text": "Bass use more oxygen at warmer temperatures.",
+      "source_id": "src-tpwd-lw-metab"
+    },
+    {
+      "text": "In warm months, livewell oxygen drops fast with no aeration.",
+      "source_id": "src-tpwd-lw-noaer"
+    },
+    {
+      "text": "In Texas Parks and Wildlife tests with five bass, oxygen was stressful after 12 to 15 minutes and projected lethal at 30 minutes.",
+      "source_id": "src-tpwd-lw-test"
+    },
+    {
+      "text": "Oxygen-stressed bass may be alive at weigh-in but often die 24 to 48 hours after release.",
+      "source_id": "src-tpwd-lw-delay"
+    },
+    {
+      "text": "Ice cools livewell water, and cooler water holds more oxygen.",
+      "source_id": "src-tpwd-lw-ice"
+    },
+    {
+      "text": "An oxygen injection system can keep livewell oxygen sufficient even in extreme conditions.",
+      "source_id": "src-tpwd-lw-o2"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

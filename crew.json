@@ -1,0 +1,595 @@
+{
+  "updatedAt": "2026-10-18T17:10:21+00:00",
+  "week": "2026-43",
+  "settings": {
+    "cadence_per_week": 7,
+    "post_time": "18:00",
+    "tz": "America/Chicago",
+    "house_styles": [],
+    "voice": null,
+    "targets": {
+      "hold3s": 0.6,
+      "avg_watch": 0.7,
+      "saves_per_view": 0.05,
+      "shares_saves_per_1k": 10,
+      "my_minutes_per_video": 4,
+      "usd_per_video": 1.0,
+      "first_pass_approval": 0.7
+    }
+  },
+  "crew": {
+    "scale": {
+      "name": "Scale",
+      "role": "Analyst",
+      "schedule": "Daily 9:00 PM + weekly Sunday 5:00 PM",
+      "state": "idle",
+      "lastRunAt": null,
+      "lastSummary": "",
+      "log": []
+    },
+    "sonar": {
+      "name": "Sonar",
+      "role": "Scout",
+      "schedule": "Sunday 6:00 PM",
+      "state": "ok",
+      "lastRunAt": "2026-10-18T12:20:00-05:00",
+      "lastSummary": "Week 2026-43: shortlisted 15 ideas, scored on curiosity/visual/sourceability, picked 7 (5 what-happens-if, 2 ten-facts).",
+      "log": [
+        {
+          "at": "2026-10-18T12:20:00-05:00",
+          "note": "Scouted 15 ideas for 2026-43; picked 7, dropped 8 (weak sourcing or visuals)."
+        }
+      ]
+    },
+    "jig": {
+      "name": "Jig",
+      "role": "Writer & checker",
+      "schedule": "Sunday 7:00 PM",
+      "state": "ok",
+      "lastRunAt": "2026-10-18T13:05:00-05:00",
+      "lastSummary": "Week 2026-43: wrote and fact-checked 7 storyboards (83-89 words, 28.5-30.9 s); 62 claims cited across 59 sources.json entries; awaiting script approval.",
+      "log": [
+        {
+          "at": "2026-10-18T13:05:00-05:00",
+          "note": "7 storyboards in week/2026-43; every claim checked against its source page with a quote in sources.json."
+        }
+      ]
+    },
+    "spinner": {
+      "name": "Spinner",
+      "role": "Render",
+      "schedule": "Nightly 11:00 PM",
+      "state": "idle",
+      "lastRunAt": null,
+      "lastSummary": "",
+      "log": []
+    },
+    "cast": {
+      "name": "Cast",
+      "role": "Poster",
+      "schedule": "Daily 6:00 PM",
+      "state": "idle",
+      "lastRunAt": null,
+      "lastSummary": "",
+      "log": []
+    },
+    "anchor": {
+      "name": "Anchor",
+      "role": "Courier",
+      "schedule": "Every 15 min, 8 AM-11 PM",
+      "state": "idle",
+      "lastRunAt": null,
+      "lastSummary": "",
+      "log": []
+    }
+  },
+  "ideas": [
+    {
+      "id": "idea-deep-water-bass",
+      "title": "What happens when you reel up a bass from 30 feet?",
+      "angle": "Barotrauma: swim bladder swells; a descending device sends it back down (format-bible sample, now fact-checked).",
+      "format": "what-happens-if",
+      "score": 9.0,
+      "scores": {
+        "curiosity": 9,
+        "visual": 9,
+        "sourceability": 9
+      },
+      "sources": [
+        "src-sdgfp-30ft",
+        "src-agfc-bladder",
+        "src-sdgfp-noduct",
+        "src-sdgfp-slow",
+        "src-agfc-signs",
+        "src-ndgf-prey",
+        "src-ndgf-descend",
+        "src-ndgf-compress",
+        "src-ndgf-limits"
+      ],
+      "status": "picked",
+      "video": "w2026-43-1-deep-water-bass"
+    },
+    {
+      "id": "idea-hot-livewell",
+      "title": "What happens to bass in a hot livewell?",
+      "angle": "Oxygen crash in warm water; fish look fine at weigh-in then die days later; ice + oxygen fix.",
+      "format": "what-happens-if",
+      "score": 8.3,
+      "scores": {
+        "curiosity": 8,
+        "visual": 8,
+        "sourceability": 9
+      },
+      "sources": [
+        "src-tpwd-lw-warm",
+        "src-tpwd-lw-metab",
+        "src-tpwd-lw-noaer",
+        "src-tpwd-lw-test",
+        "src-tpwd-lw-delay",
+        "src-tpwd-lw-ice",
+        "src-tpwd-lw-o2"
+      ],
+      "status": "picked",
+      "video": "w2026-43-2-hot-livewell"
+    },
+    {
+      "id": "idea-swallowed-hook",
+      "title": "What happens if a fish swallows your hook?",
+      "angle": "Inside-the-throat reveal; cut-the-line beats digging the hook out (bluegill study).",
+      "format": "what-happens-if",
+      "score": 8.0,
+      "scores": {
+        "curiosity": 8,
+        "visual": 8,
+        "sourceability": 8
+      },
+      "sources": [
+        "src-fobert-esoph",
+        "src-fobert-determinant",
+        "src-serc-bluegill",
+        "src-afs-sunfish",
+        "src-fobert-removed",
+        "src-fobert-cut",
+        "src-fobert-expel",
+        "src-fobert-conclusion"
+      ],
+      "status": "picked",
+      "video": "w2026-43-3-swallowed-hook"
+    },
+    {
+      "id": "idea-nest-guard",
+      "title": "What happens when you pull a bass off its nest?",
+      "angle": "Guarding male gone: about half the brood eaten in ~10 minutes.",
+      "format": "what-happens-if",
+      "score": 8.3,
+      "scores": {
+        "curiosity": 9,
+        "visual": 8,
+        "sourceability": 8
+      },
+      "sources": [
+        "src-oc-tenmin",
+        "src-afs-fan",
+        "src-afs-guard",
+        "src-afs-weeks",
+        "src-afs-predators",
+        "src-oc-cr",
+        "src-oc-harvest"
+      ],
+      "status": "picked",
+      "video": "w2026-43-4-nest-guard"
+    },
+    {
+      "id": "idea-dry-hands",
+      "title": "What happens when you grab a bass with dry hands?",
+      "angle": "You've been holding bass wrong: slime coat, gill covers, hot decks, cloth gloves.",
+      "format": "what-happens-if",
+      "score": 7.7,
+      "scores": {
+        "curiosity": 7,
+        "visual": 7,
+        "sourceability": 9
+      },
+      "sources": [
+        "src-tpwd-cr-slime",
+        "src-tpwd-cr-gill",
+        "src-tpwd-cr-hot",
+        "src-tpwd-cr-carpet",
+        "src-tpwd-cr-gloves",
+        "src-tpwd-cr-bare",
+        "src-tpwd-cr-jaw",
+        "src-tpwd-cr-breath"
+      ],
+      "status": "picked",
+      "video": "w2026-43-5-dry-hands"
+    },
+    {
+      "id": "idea-largemouth-facts",
+      "title": "10 largemouth bass facts in under 30 seconds",
+      "angle": "Agency species-profile facts: jaw, fry, egg counts, dad guards nest, record.",
+      "format": "ten-facts",
+      "score": 8.0,
+      "scores": {
+        "curiosity": 7,
+        "visual": 8,
+        "sourceability": 9
+      },
+      "sources": [
+        "src-tpwd-lmb-jaw",
+        "src-tpwd-lmb-fry",
+        "src-tpwd-lmb-eggs",
+        "src-tpwd-lmb-male",
+        "src-afs-fan",
+        "src-tpwd-lmb-cannibal",
+        "src-vadwr-lowlight",
+        "src-sdgfp-noduct",
+        "src-tpwd-lmb-range",
+        "src-tpwd-lmb-world",
+        "src-strib-record",
+        "src-strib-weight"
+      ],
+      "status": "picked",
+      "video": "w2026-43-6-largemouth-facts"
+    },
+    {
+      "id": "idea-smallmouth-facts",
+      "title": "10 smallmouth bass facts in under 30 seconds",
+      "angle": "Name origins, vertical bars, nests, hatch speed, 1955 world record.",
+      "format": "ten-facts",
+      "score": 8.0,
+      "scores": {
+        "curiosity": 7,
+        "visual": 8,
+        "sourceability": 9
+      },
+      "sources": [
+        "src-tpwd-smb-bars",
+        "src-tpwd-smb-jaw",
+        "src-tpwd-smb-greek",
+        "src-tpwd-smb-dolomieu",
+        "src-tpwd-smb-names",
+        "src-tpwd-smb-females",
+        "src-tpwd-smb-eggs",
+        "src-tpwd-smb-hatch",
+        "src-tpwd-smb-guard",
+        "src-twra-record"
+      ],
+      "status": "picked",
+      "video": "w2026-43-7-smallmouth-facts"
+    },
+    {
+      "id": "idea-otolith-age",
+      "title": "Inside a bass's ear: the stone that tells its age",
+      "angle": "Body-inside reveal of otoliths with yearly rings.",
+      "format": "what-happens-if",
+      "score": 8.0,
+      "scores": {
+        "curiosity": 8,
+        "visual": 9,
+        "sourceability": 7
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-lateral-line",
+      "title": "What happens when your crankbait rattles past a bass?",
+      "angle": "Lateral line senses vibration before the bass sees the lure.",
+      "format": "what-happens-if",
+      "score": 7.0,
+      "scores": {
+        "curiosity": 7,
+        "visual": 8,
+        "sourceability": 6
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-bass-color-vision",
+      "title": "Can a bass see your lure color?",
+      "angle": "Cone types and color vision research; evidence is mixed, needs careful sourcing.",
+      "format": "what-happens-if",
+      "score": 6.7,
+      "scores": {
+        "curiosity": 8,
+        "visual": 7,
+        "sourceability": 5
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-two-largemouths",
+      "title": "You've been calling the wrong fish a largemouth",
+      "angle": "Northern vs Florida largemouth naming change (Micropterus nigricans); taxonomy needs a primary source.",
+      "format": "what-happens-if",
+      "score": 6.0,
+      "scores": {
+        "curiosity": 7,
+        "visual": 6,
+        "sourceability": 5
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-bucket-biology",
+      "title": "What happens if you dump bass into a new lake?",
+      "angle": "Illegal stocking and its effects on native fish; needs agency case studies.",
+      "format": "what-happens-if",
+      "score": 6.0,
+      "scores": {
+        "curiosity": 6,
+        "visual": 6,
+        "sourceability": 6
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-winter-bass",
+      "title": "What happens to a bass when the lake ices over?",
+      "angle": "Cold-water metabolism slowdown; sources are general, numbers vary.",
+      "format": "what-happens-if",
+      "score": 6.0,
+      "scores": {
+        "curiosity": 6,
+        "visual": 7,
+        "sourceability": 5
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-soft-plastics",
+      "title": "What happens if a bass swallows a soft plastic?",
+      "angle": "Soft plastic ingestion studies; thin, mostly trout data.",
+      "format": "what-happens-if",
+      "score": 5.7,
+      "scores": {
+        "curiosity": 7,
+        "visual": 6,
+        "sourceability": 4
+      },
+      "sources": [],
+      "status": "dropped"
+    },
+    {
+      "id": "idea-bass-virus",
+      "title": "What happens when largemouth bass virus hits a lake?",
+      "angle": "LMBV; strong agency sources but low visual payoff.",
+      "format": "what-happens-if",
+      "score": 5.7,
+      "scores": {
+        "curiosity": 5,
+        "visual": 5,
+        "sourceability": 7
+      },
+      "sources": [],
+      "status": "dropped"
+    }
+  ],
+  "videos": [
+    {
+      "id": "w2026-43-1-deep-water-bass",
+      "week": "2026-43",
+      "title": "What Happens When You Reel Up a Bass From 30 Feet?",
+      "format": "what-happens-if",
+      "style": "clay",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-1-deep-water-bass/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-2-hot-livewell",
+      "week": "2026-43",
+      "title": "What Happens to Bass in a Hot Livewell?",
+      "format": "what-happens-if",
+      "style": "blueprint",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-2-hot-livewell/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-3-swallowed-hook",
+      "week": "2026-43",
+      "title": "What Happens If a Fish Swallows Your Hook?",
+      "format": "what-happens-if",
+      "style": "clay",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-3-swallowed-hook/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-4-nest-guard",
+      "week": "2026-43",
+      "title": "What Happens When You Pull a Bass Off Its Nest?",
+      "format": "what-happens-if",
+      "style": "blueprint",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-4-nest-guard/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-5-dry-hands",
+      "week": "2026-43",
+      "title": "What Happens When You Grab a Bass With Dry Hands?",
+      "format": "what-happens-if",
+      "style": "clay",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-5-dry-hands/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-6-largemouth-facts",
+      "week": "2026-43",
+      "title": "10 Largemouth Bass Facts in Under 30 Seconds",
+      "format": "ten-facts",
+      "style": "blueprint",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-6-largemouth-facts/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    },
+    {
+      "id": "w2026-43-7-smallmouth-facts",
+      "week": "2026-43",
+      "title": "10 Smallmouth Bass Facts in Under 30 Seconds",
+      "format": "ten-facts",
+      "style": "clay",
+      "status": "awaiting_script",
+      "storyboard": "week/2026-43/w2026-43-7-smallmouth-facts/storyboard.json",
+      "final": null,
+      "poster": null,
+      "approval": {
+        "script": null,
+        "final": null,
+        "notes": [],
+        "reason": null
+      },
+      "post": {
+        "tiktok": null,
+        "instagram": null
+      },
+      "stats": null,
+      "cost": {
+        "minutes_crew": 20,
+        "render_seconds": 0,
+        "elevenlabs_chars": 0,
+        "usd": 0,
+        "my_minutes": 0
+      }
+    }
+  ],
+  "formats": [
+    {
+      "id": "what-happens-if",
+      "status": "active",
+      "misses_in_row": 0
+    },
+    {
+      "id": "ten-facts",
+      "status": "active",
+      "misses_in_row": 0
+    }
+  ],
+  "scorecard": {
+    "baseline": null,
+    "weeks": []
+  },
+  "tickets": {}
+}

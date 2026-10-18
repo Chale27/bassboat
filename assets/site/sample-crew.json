@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-10-18T20:15:00-05:00",
+  "week": "2026-43",
+  "settings": {"cadence_per_week": 7, "post_time": "18:00", "tz": "America/Chicago", "house_styles": ["clay", "blueprint"], "voice": null,
+    "targets": {"hold3s": 0.60, "avg_watch": 0.70, "saves_per_view": 0.05, "shares_saves_per_1k": 10, "my_minutes_per_video": 4, "usd_per_video": 1.0, "first_pass_approval": 0.70}},
+  "crew": {
+    "scale":   {"name": "Scale",   "role": "Analyst",          "schedule": "Daily 9:00 PM + weekly Sunday 5:00 PM", "state": "ok",        "lastRunAt": "2026-10-18T17:04:00-05:00", "lastSummary": "Week 42 scorecard written: 1 video shipped, hold 3s 64%.", "log": [{"at": "2026-10-18T17:04:00-05:00", "note": "Weekly scorecard for 2026-42."}, {"at": "2026-10-17T21:02:00-05:00", "note": "Pulled stats for w2026-42-2-ten-bass-facts."}, {"at": "2026-10-16T21:01:00-05:00", "note": "No new posts to score."}, {"at": "2026-10-15T21:00:00-05:00", "note": "Older entry that should not show."}]},
+    "sonar":   {"name": "Sonar",   "role": "Scout",            "schedule": "Sunday 6:00 PM",  "state": "ok",        "lastRunAt": "2026-10-18T18:10:00-05:00", "lastSummary": "Picked 2 ideas, dropped 1 (no source).", "log": [{"at": "2026-10-18T18:10:00-05:00", "note": "2 ideas picked for 2026-43."}]},
+    "jig":     {"name": "Jig",     "role": "Writer & checker", "schedule": "Sunday 7:00 PM",  "state": "needs_you", "lastRunAt": "2026-10-18T19:12:00-05:00", "lastSummary": "1 script waiting for your Sunday approval. <b>tags stay text</b>", "log": [{"at": "2026-10-18T19:12:00-05:00", "note": "Wrote w2026-43-1-deep-water-bass; 1 claim missing a source."}]},
+    "spinner": {"name": "Spinner", "role": "Render",           "schedule": "Nightly 11:00 PM", "state": "idle",     "lastRunAt": "2026-10-17T23:00:00-05:00", "lastSummary": "Nothing approved to render.", "log": []},
+    "cast":    {"name": "Cast",    "role": "Poster",           "schedule": "Daily 6:00 PM",   "state": "running",   "lastRunAt": "2026-10-18T18:00:00-05:00", "lastSummary": "Posting check in progress.", "log": [{"at": "2026-10-17T18:01:00-05:00", "note": "Posted w2026-42-2-ten-bass-facts to TikTok (public) and Instagram (trial)."}]},
+    "anchor":  {"name": "Anchor",  "role": "Courier",          "schedule": "Every 15 min, 8 AM-11 PM", "state": "ok", "lastRunAt": "2026-10-18T20:15:00-05:00", "lastSummary": "1 ticket handled.", "log": [{"at": "2026-10-18T20:15:00-05:00", "note": "Closed #3 run: sonar."}]}
+  },
+  "ideas": [
+    {"id": "idea-43-1", "title": "Reel up a bass from 30 feet", "angle": "barotrauma explained", "format": "what-happens-if", "score": 8.4, "sources": ["src-sample-barotrauma"], "status": "picked"},
+    {"id": "idea-43-2", "title": "Ten facts about crankbaits", "angle": "why lips dive", "format": "ten-facts", "score": 6.1, "sources": [], "status": "dropped"}
+  ],
+  "videos": [
+    {"id": "w2026-43-1-deep-water-bass", "week": "2026-43", "title": "What Happens When You Reel Up a Bass From 30 Feet?", "format": "what-happens-if", "style": "clay", "status": "awaiting_script",
+     "storyboard": "assets/site/sample-storyboard.json", "final": null, "poster": null,
+     "approval": {"script": null, "final": null, "notes": [], "reason": null},
+     "post": {"tiktok": null, "instagram": null}, "stats": null,
+     "cost": {"minutes_crew": 6, "render_seconds": 0, "elevenlabs_chars": 0, "usd": 0.04, "my_minutes": 0}},
+    {"id": "w2026-42-2-ten-bass-facts", "week": "2026-42", "title": "10 Bass Facts Most Anglers Miss", "format": "ten-facts", "style": "blueprint", "status": "posted",
+     "storyboard": "week/2026-42/w2026-42-2-ten-bass-facts/storyboard.json", "final": null, "poster": null,
+     "approval": {"script": "approved", "final": "approved", "notes": [], "reason": null},
+     "post": {"tiktok": {"url": "https://example.com/sample/tiktok", "postedAt": "2026-10-17T18:01:00-05:00", "mode": "public"}, "instagram": {"url": "https://example.com/sample/instagram", "postedAt": "2026-10-17T18:02:00-05:00", "trial": true}},
+     "stats": {"views": 4200, "hold3s": 0.64, "avg_watch": 0.58, "saves": 160, "shares": 38, "likes": 410, "comments": 22,
+               "curve": [[0, 100], [3, 64], [6, 55], [10, 49], [15, 44], [20, 40], [25, 37], [30, 33], [35, 28]]},
+     "cost": {"minutes_crew": 41, "render_seconds": 310, "elevenlabs_chars": 520, "usd": 0.82, "my_minutes": 5}}
+  ],
+  "formats": [
+    {"id": "what-happens-if", "status": "active", "misses_in_row": 0},
+    {"id": "ten-facts", "status": "testing", "misses_in_row": 3}
+  ],
+  "scorecard": {
+    "baseline": {"week": "2026-41", "my_minutes_per_video": 12, "usd_per_video": 2.4, "videos_shipped": 2, "first_pass_approval": 0.5, "hold3s": 0.52, "avg_watch": 0.48, "saves_per_view": 0.02, "shares_saves_per_1k": 6},
+    "weeks": [
+      {"week": "2026-42", "my_minutes_per_video": 5, "usd_per_video": 0.82, "videos_shipped": 1, "first_pass_approval": 1.0, "hold3s": 0.64, "avg_watch": 0.58, "saves_per_view": 0.038, "shares_saves_per_1k": 47.1}
+    ]
+  },
+  "tickets": {
+    "sonar": {"status": "done", "issue": 3, "at": "2026-10-18T20:15:00-05:00", "note": "Started Sonar."},
+    "w2026-42-2-ten-bass-facts": {"status": "done", "issue": 2, "at": "2026-10-16T20:00:00-05:00", "note": "final approved"},
+    "spinner": {"status": "failed", "issue": 4, "at": "2026-10-18T20:30:00-05:00", "note": "Mac asleep"}
+  }
+}

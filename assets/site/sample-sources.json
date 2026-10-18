@@ -1,0 +1,5 @@
+[
+  {"id": "src-sample-swim-bladder", "claim": "Bass use a gas-filled swim bladder for buoyancy.", "url": "https://example.org/sample/swim-bladder", "title": "How fish stay afloat (sample)", "publisher": "Sample Fisheries Lab", "checkedAt": "2026-10-18T18:40:00-05:00", "quote": "Sample quote for preview only."},
+  {"id": "src-sample-barotrauma", "claim": "Rapid ascent causes swim bladder gas to expand.", "url": "https://example.org/sample/barotrauma", "title": "Barotrauma in deep-caught fish (sample)", "publisher": "Sample Wildlife Agency", "checkedAt": "2026-10-18T18:41:00-05:00", "quote": "Sample quote for preview only."},
+  {"id": "src-sample-descender", "claim": "Descenders return fish to depth.", "url": "https://example.org/sample/descender", "title": "Using a descender device (sample)", "publisher": "Sample Angler Guide", "checkedAt": "2026-10-18T18:42:00-05:00", "quote": "Sample quote for preview only."}
+]

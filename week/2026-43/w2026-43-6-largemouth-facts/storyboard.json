@@ -1,0 +1,314 @@
+{
+  "id": "w2026-43-6-largemouth-facts",
+  "format": "ten-facts",
+  "title": "10 Largemouth Bass Facts in Under 30 Seconds",
+  "hook": "Ten largemouth facts in under thirty seconds.",
+  "style": "blueprint",
+  "script": "Ten largemouth facts in under thirty seconds. Its upper jaw reaches past its eye. Fry eat zooplankton, then hunt at about two inches. One female can lay up to 43,000 eggs. Dad chases her off and guards the eggs. He fans out the nest with his tail. Bigger bass will eat the smaller ones. They're most voracious in low light. They can't burp gas from their swim bladder. Native east of the Rockies, now introduced worldwide. The record: 22 pounds 4 ounces, 1932. Which one did you already know?",
+  "lines": [
+    {
+      "text": "Ten largemouth facts",
+      "shot": 1
+    },
+    {
+      "text": "in under thirty seconds.",
+      "shot": 1
+    },
+    {
+      "text": "Its upper jaw",
+      "shot": 2
+    },
+    {
+      "text": "reaches past its eye.",
+      "shot": 2
+    },
+    {
+      "text": "Fry eat zooplankton,",
+      "shot": 3
+    },
+    {
+      "text": "then hunt at",
+      "shot": 3
+    },
+    {
+      "text": "about two inches.",
+      "shot": 3
+    },
+    {
+      "text": "One female can",
+      "shot": 4
+    },
+    {
+      "text": "lay up to",
+      "shot": 4
+    },
+    {
+      "text": "43,000 eggs.",
+      "shot": 4
+    },
+    {
+      "text": "Dad chases her",
+      "shot": 5
+    },
+    {
+      "text": "off and guards",
+      "shot": 5
+    },
+    {
+      "text": "the eggs.",
+      "shot": 5
+    },
+    {
+      "text": "He fans out",
+      "shot": 6
+    },
+    {
+      "text": "the nest with",
+      "shot": 6
+    },
+    {
+      "text": "his tail.",
+      "shot": 6
+    },
+    {
+      "text": "Bigger bass will",
+      "shot": 7
+    },
+    {
+      "text": "eat the smaller ones.",
+      "shot": 7
+    },
+    {
+      "text": "They're most voracious",
+      "shot": 8
+    },
+    {
+      "text": "in low light.",
+      "shot": 8
+    },
+    {
+      "text": "They can't burp",
+      "shot": 9
+    },
+    {
+      "text": "gas from their",
+      "shot": 9
+    },
+    {
+      "text": "swim bladder.",
+      "shot": 9
+    },
+    {
+      "text": "Native east of",
+      "shot": 10
+    },
+    {
+      "text": "the Rockies,",
+      "shot": 10
+    },
+    {
+      "text": "now introduced worldwide.",
+      "shot": 10
+    },
+    {
+      "text": "The record:",
+      "shot": 11
+    },
+    {
+      "text": "22 pounds 4",
+      "shot": 11
+    },
+    {
+      "text": "ounces, 1932.",
+      "shot": 11
+    },
+    {
+      "text": "Which one did",
+      "shot": 12
+    },
+    {
+      "text": "you already know?",
+      "shot": 12
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "Largemouth bass already on screen at frame 0; stopwatch starts at 0.0 s; title flashes for 0.5 s over the fish (no separate title card).",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 2.5
+    },
+    {
+      "n": 2,
+      "scene": "studio",
+      "subject": "bass:jaw",
+      "action": "Labeled callout traces the upper jaw past the rear of the eye.",
+      "camera": "pan",
+      "counter": 1,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 3,
+      "scene": "underwater",
+      "subject": "bass:fry",
+      "action": "Tiny fry pick at zooplankton dots, then one grows to a 2-inch ruler mark and lunges.",
+      "camera": "pan",
+      "counter": 2,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 4,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Egg count ticks up on a nest: 2,000 ... 43,000.",
+      "camera": "pan",
+      "counter": 3,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 5,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Male nudges the female away and parks over the eggs.",
+      "camera": "pan",
+      "counter": 4,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 6,
+      "scene": "underwater",
+      "subject": "bass:nest",
+      "action": "Tail sweeps a round dish in the bottom.",
+      "camera": "pan",
+      "counter": 5,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 7,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "Big bass engulfs a small bass.",
+      "camera": "pan",
+      "counter": 6,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 8,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "Light dims to dusk; bass strikes a baitfish.",
+      "camera": "pan",
+      "counter": 7,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 9,
+      "scene": "cutaway",
+      "subject": "bass:swim-bladder",
+      "action": "X-ray swim bladder with a crossed-out 'burp' duct.",
+      "camera": "pan",
+      "counter": 8,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 10,
+      "scene": "studio",
+      "subject": "map",
+      "action": "Map: native range east of the Rockies glows, then pins pop up on other continents.",
+      "camera": "pan",
+      "counter": 9,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 11,
+      "scene": "studio",
+      "subject": "bass:record",
+      "action": "Vintage scale reads 22 lb 4 oz; a 1932 date tag swings.",
+      "camera": "pan",
+      "counter": 10,
+      "est_seconds": 2.6
+    },
+    {
+      "n": 12,
+      "scene": "studio",
+      "subject": "bass",
+      "action": "Camera settles on the bass; stopwatch freezes; the question appears as captions. Cut to black on the last word.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 2.4
+    }
+  ],
+  "ending": "question",
+  "question": "Which one did you already know?",
+  "claims": [
+    {
+      "text": "A largemouth bass's upper jaw reaches past the rear of its eye.",
+      "source_id": "src-tpwd-lmb-jaw"
+    },
+    {
+      "text": "Largemouth fry eat zooplankton and become active predators at about two inches.",
+      "source_id": "src-tpwd-lmb-fry"
+    },
+    {
+      "text": "A female largemouth lays roughly 2,000 to 43,000 eggs in a nest.",
+      "source_id": "src-tpwd-lmb-eggs"
+    },
+    {
+      "text": "The male chases the female away and guards the eggs.",
+      "source_id": "src-tpwd-lmb-male"
+    },
+    {
+      "text": "Male largemouth fan out the nest with their tails.",
+      "source_id": "src-afs-fan"
+    },
+    {
+      "text": "Larger largemouth bass prey on smaller bass.",
+      "source_id": "src-tpwd-lmb-cannibal"
+    },
+    {
+      "text": "Largemouth bass are especially voracious in low light.",
+      "source_id": "src-vadwr-lowlight"
+    },
+    {
+      "text": "Bass have no physical outlet to vent swim bladder gas.",
+      "source_id": "src-sdgfp-noduct"
+    },
+    {
+      "text": "Largemouth bass are native east of the Rockies.",
+      "source_id": "src-tpwd-lmb-range"
+    },
+    {
+      "text": "Largemouth bass have been introduced to many areas worldwide.",
+      "source_id": "src-tpwd-lmb-world"
+    },
+    {
+      "text": "The all-tackle record largemouth, 22 lb 4 oz, was caught by George Perry in 1932 and tied in 2009.",
+      "source_id": "src-strib-record"
+    },
+    {
+      "text": "The record weight is 22 lb 4 oz.",
+      "source_id": "src-strib-weight"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

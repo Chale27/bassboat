@@ -1,0 +1,227 @@
+{
+  "id": "w2026-43-1-deep-water-bass",
+  "format": "what-happens-if",
+  "title": "What Happens When You Reel Up a Bass From 30 Feet?",
+  "hook": "If you reel a bass up from 30 feet,",
+  "style": "clay",
+  "script": "If you reel a bass up from 30 feet, its swim bladder starts to balloon. Bass can't burp that gas out. It seeps out slowly, through the blood and gills. So the eyes bulge, the belly swells, and your fish floats sideways, easy prey for birds and boats. The fix: a descending device clips its lip and sinks it back to the depth it came from. Down there, pressure squeezes the bladder back. It won't heal everything, but it gets your bass home.",
+  "lines": [
+    {
+      "text": "If you reel",
+      "shot": 1
+    },
+    {
+      "text": "a bass up",
+      "shot": 1
+    },
+    {
+      "text": "from 30 feet,",
+      "shot": 1
+    },
+    {
+      "text": "its swim bladder",
+      "shot": 2
+    },
+    {
+      "text": "starts to balloon.",
+      "shot": 2
+    },
+    {
+      "text": "Bass can't burp",
+      "shot": 2
+    },
+    {
+      "text": "that gas out.",
+      "shot": 2
+    },
+    {
+      "text": "It seeps out slowly,",
+      "shot": 2
+    },
+    {
+      "text": "through the blood",
+      "shot": 2
+    },
+    {
+      "text": "and gills.",
+      "shot": 2
+    },
+    {
+      "text": "So the eyes bulge,",
+      "shot": 3
+    },
+    {
+      "text": "the belly swells,",
+      "shot": 3
+    },
+    {
+      "text": "and your fish",
+      "shot": 3
+    },
+    {
+      "text": "floats sideways,",
+      "shot": 3
+    },
+    {
+      "text": "easy prey for",
+      "shot": 3
+    },
+    {
+      "text": "birds and boats.",
+      "shot": 3
+    },
+    {
+      "text": "The fix:",
+      "shot": 4
+    },
+    {
+      "text": "a descending device",
+      "shot": 4
+    },
+    {
+      "text": "clips its lip",
+      "shot": 4
+    },
+    {
+      "text": "and sinks it",
+      "shot": 4
+    },
+    {
+      "text": "back to the",
+      "shot": 4
+    },
+    {
+      "text": "depth it came from.",
+      "shot": 4
+    },
+    {
+      "text": "Down there,",
+      "shot": 5
+    },
+    {
+      "text": "pressure squeezes the",
+      "shot": 5
+    },
+    {
+      "text": "bladder back.",
+      "shot": 5
+    },
+    {
+      "text": "It won't heal everything,",
+      "shot": 5
+    },
+    {
+      "text": "but it gets",
+      "shot": 5
+    },
+    {
+      "text": "your bass home.",
+      "shot": 5
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "Bass already on screen at frame 0, hooked and being pulled straight up through dark water toward the light; depth gauge ticks from 30 ft.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 2.9
+    },
+    {
+      "n": 2,
+      "scene": "cutaway",
+      "subject": "bass:swim-bladder",
+      "action": "Same continuous move into a see-through cutaway: the swim bladder swells like a balloon; tiny gas dots drift slowly into blood vessels and out the gills.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 6.2
+    },
+    {
+      "n": 3,
+      "scene": "boat",
+      "subject": "bass",
+      "action": "Hard cut in: bass at the surface beside the boat, eyes bulging, belly swollen, rolling onto its side; a gull circles and a boat hull slides past.",
+      "camera": "orbit",
+      "counter": null,
+      "est_seconds": 6.6
+    },
+    {
+      "n": 4,
+      "scene": "underwater",
+      "subject": "descending-device",
+      "action": "A weighted lip clip grips the bass and sinks it; camera follows it down past the 30 ft mark.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 6.4
+    },
+    {
+      "n": 5,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "At depth the bladder shrinks back to normal size, the clip opens and the bass swims off into the dark. Cut to black on the last word.",
+      "camera": "static",
+      "counter": null,
+      "est_seconds": 6.4
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "Barotrauma effects can start when a bass is reeled up from deeper than about 30 feet.",
+      "source_id": "src-sdgfp-30ft"
+    },
+    {
+      "text": "The rapid pressure change makes the swim bladder expand.",
+      "source_id": "src-agfc-bladder"
+    },
+    {
+      "text": "Bass have no outlet to burp gas from the swim bladder.",
+      "source_id": "src-sdgfp-noduct"
+    },
+    {
+      "text": "The gas leaves slowly through the blood and out the gills.",
+      "source_id": "src-sdgfp-slow"
+    },
+    {
+      "text": "Signs include bulging eyes, a swollen belly and floating on its side.",
+      "source_id": "src-agfc-signs"
+    },
+    {
+      "text": "A fish stuck at the surface can be eaten by birds or struck by boats.",
+      "source_id": "src-ndgf-prey"
+    },
+    {
+      "text": "A descending device clips to the fish's lip and sinks it back to its original depth.",
+      "source_id": "src-ndgf-descend"
+    },
+    {
+      "text": "Back at depth, pressure recompresses the swim bladder.",
+      "source_id": "src-ndgf-compress"
+    },
+    {
+      "text": "Descending does not reverse other internal injuries.",
+      "source_id": "src-ndgf-limits"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

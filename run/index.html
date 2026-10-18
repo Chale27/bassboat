@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bass Boat Run</title>
+<meta name="description" content="Start a Bass Boat crew member or send a video decision by opening a GitHub ticket.">
+<meta name="theme-color" content="#1d4a3c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Run Crew">
+<link rel="icon" href="../assets/site/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/site/icon.svg">
+<link rel="manifest" href="../assets/site/manifest.webmanifest">
+<style>
+:root{--bg:#f3efe6;--card:#fffdf8;--card2:#eef3ee;--ink:#13261f;--muted:#56685f;--line:#d5ddd3;--green:#2f6b3f;--lake:#2a6f8f;--sun:#e8742c;--bad:#b4442a;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1714;--card:#11231e;--card2:#0f1f26;--ink:#e7efe9;--muted:#9db0a6;--line:#24413a;--green:#5aa577;--lake:#6fb6d6;--sun:#f08a45;--bad:#ff9b80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1714;--card:#11231e;--card2:#0f1f26;--ink:#e7efe9;--muted:#9db0a6;--line:#24413a;--green:#5aa577;--lake:#6fb6d6;--sun:#f08a45;--bad:#ff9b80;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:calc(16px + env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom));overflow-x:hidden}
+main{max-width:640px;margin:0 auto}
+h1{font-size:28px;margin:4px 0 6px;display:flex;align-items:center;gap:10px}
+h1 img{width:40px;height:40px;border-radius:10px}
+h2{font-size:18px;margin:26px 0 8px}
+p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.note{background:var(--card2);border-left:3px solid var(--sun);border-radius:8px;padding:8px 12px;color:var(--ink);font-size:14px}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+a.b{display:flex;gap:12px;align-items:center;text-decoration:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+a.b:active{transform:translateY(1px)}
+.e{font-size:28px;line-height:1}
+.b b{display:block;font-size:17px}
+.b small{color:var(--muted);font-size:13px}
+.b .go{margin-left:auto;background:var(--sun);color:#1b0f05;font-weight:700;border-radius:10px;padding:6px 12px;font-size:14px;white-space:nowrap}
+code{display:none;font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+.show code{display:block}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input{width:100%;font:15px ui-monospace,SFMono-Regular,Menlo,monospace;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+@media (min-width:520px){.btns{grid-template-columns:repeat(4,minmax(0,1fr))}}
+button{font:inherit;font-weight:700;font-size:15px;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--ink);cursor:pointer}
+button.go{background:var(--green);border-color:var(--green);color:#fff}
+button.no{background:transparent;color:var(--bad);border-color:var(--bad)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.err{color:var(--bad);font-size:13px;min-height:18px;margin-top:6px}
+a{color:var(--lake)}
+.foot{margin-top:24px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1><img src="../assets/site/icon.svg" alt="">Run the crew</h1>
+<p>Tap a crew member, then <b>Submit</b> on GitHub. Anchor starts it within 15 minutes (8 AM-11 PM) and closes the ticket.</p>
+<p class="note">Only issues opened by <b>Chale27</b> are honored. Tickets from anyone else are ignored.</p>
+<ul id="list"></ul>
+
+<h2>Decide on a video</h2>
+<p>Paste a video id (for example <code style="display:inline">w2026-43-1-deep-water-bass</code>) and pick an action.</p>
+<label for="vid">Video id</label>
+<input id="vid" list="vids" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="w2026-43-1-slug">
+<datalist id="vids"></datalist>
+<div class="btns">
+  <button type="button" class="go" data-act="approve">Approve script</button>
+  <button type="button" data-act="notes">Notes</button>
+  <button type="button" class="go" data-act="final">Approve final</button>
+  <button type="button" class="no" data-act="reject">Reject</button>
+</div>
+<div class="err" id="err" role="status"></div>
+
+<p class="foot"><a href="#" id="toggle">Show ticket links</a> (for Siri Shortcuts: Open URLs) · <a href="../">Back to the dashboard</a></p>
+</main>
+<script>
+"use strict";
+const GH_REPO = "Chale27/bassboat", GH_OWNER = "Chale27";
+const CREW = [
+  ["scale", "📊", "Scale", "Analyst", "Daily 9:00 PM + weekly Sunday 5:00 PM"],
+  ["sonar", "📡", "Sonar", "Scout", "Sunday 6:00 PM"],
+  ["jig", "✍️", "Jig", "Writer & checker", "Sunday 7:00 PM"],
+  ["spinner", "🎬", "Spinner", "Render", "Nightly 11:00 PM"],
+  ["cast", "🎣", "Cast", "Poster", "Daily 6:00 PM"],
+  ["anchor", "⚓", "Anchor", "Courier", "Every 15 min, 8 AM-11 PM"],
+];
+const FOOT = "\n\n---\nOpened from the Bass Boat Run page. Anchor picks this up within 15 minutes (8 AM-11 PM) and closes the ticket. Only tickets opened by @" + GH_OWNER + " are honored.";
+const issueUrl = (t, b) => "https://github.com/" + GH_REPO + "/issues/new?title=" + encodeURIComponent(t) + "&body=" + encodeURIComponent(b);
+function h(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = String(text); return e; }
+
+const list = document.getElementById("list");
+CREW.forEach(([id, emo, name, role, sched]) => {
+  const url = issueUrl("run: " + id, "Start " + name + " now." + FOOT);
+  const a = h("a", "b"); a.href = url; a.target = "_blank"; a.rel = "noopener";
+  const txt = h("span"); txt.style.minWidth = "0";
+  txt.append(h("b", null, name), h("small", null, role + " · " + sched), h("code", null, url));
+  a.append(h("span", "e", emo), txt, h("span", "go", "▶ Run"));
+  const li = h("li"); li.append(a); list.append(li);
+});
+document.getElementById("toggle").addEventListener("click", e => { e.preventDefault(); list.classList.toggle("show"); });
+
+const ID_RE = /^w\d{4}-\d{2}-\d+-[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const BODIES = {
+  approve: id => "Script approved for " + id + ". Spinner renders it next." + FOOT,
+  notes: id => "Notes for Jig on " + id + " (these are appended to style.md, then Jig rewrites):\n\n- What to change:\n- What to keep:\n- Tone / pacing:\n" + FOOT,
+  final: id => "Final approved for " + id + ". Cast schedules it for the next post slot." + FOOT,
+  reject: id => "Reason for rejecting " + id + ":\n\n" + FOOT,
+};
+const inp = document.getElementById("vid"), err = document.getElementById("err");
+const pre = new URLSearchParams(location.search).get("video");
+if (pre && ID_RE.test(pre)) inp.value = pre;
+document.querySelectorAll("[data-act]").forEach(b => b.addEventListener("click", () => {
+  const id = inp.value.trim().toLowerCase();
+  if (!ID_RE.test(id)) { err.textContent = "That doesn't look like a video id (w<YYYY-WW>-<n>-<slug>)."; inp.focus(); return; }
+  err.textContent = "";
+  const act = b.dataset.act;
+  window.open(issueUrl(act + ": " + id, BODIES[act](id)), "_blank", "noopener");
+}));
+
+/* suggest ids from crew.json (optional; page works without it) */
+fetch("../crew.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => {
+  const dl = document.getElementById("vids");
+  (j && Array.isArray(j.videos) ? j.videos : []).forEach(v => {
+    if (!v || !ID_RE.test(String(v.id || ""))) return;
+    const o = document.createElement("option"); o.value = v.id; o.label = String(v.status || "") + " · " + String(v.title || ""); dl.append(o);
+  });
+}).catch(() => {});
+</script>
+</body>
+</html>

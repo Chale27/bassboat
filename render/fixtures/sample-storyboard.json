@@ -1,0 +1,162 @@
+{
+  "id": "w2026-43-1-deep-water-bass",
+  "format": "what-happens-if",
+  "title": "What Happens When You Reel Up a Bass From 30 Feet?",
+  "hook": "If you reel a bass up from thirty feet, here's what happens inside it.",
+  "style": "clay",
+  "script": "If you reel a bass up from thirty feet, here's what happens inside it. Below about thirty feet, the trip up can hurt it. As you crank it up, the water pressure drops fast. Its swim bladder, a gas-filled organ, starts to expand. And a bass has no outlet to vent that gas. Its eyes bulge and its belly swells. The fix is a descending device, a weight on its lip that sinks it back down. Back at depth, the bladder compresses again, and your bass swims off.",
+  "lines": [
+    {
+      "text": "If you reel a bass up from thirty feet,",
+      "shot": 1
+    },
+    {
+      "text": "here's what happens inside it.",
+      "shot": 1
+    },
+    {
+      "text": "Below about thirty feet,",
+      "shot": 2
+    },
+    {
+      "text": "the trip up can hurt it.",
+      "shot": 2
+    },
+    {
+      "text": "As you crank it up,",
+      "shot": 3
+    },
+    {
+      "text": "the water pressure drops fast.",
+      "shot": 3
+    },
+    {
+      "text": "Its swim bladder, a gas-filled organ,",
+      "shot": 4
+    },
+    {
+      "text": "starts to expand.",
+      "shot": 4
+    },
+    {
+      "text": "And a bass has no outlet to vent that gas.",
+      "shot": 4
+    },
+    {
+      "text": "Its eyes bulge and its belly swells.",
+      "shot": 4
+    },
+    {
+      "text": "The fix is a descending device,",
+      "shot": 5
+    },
+    {
+      "text": "a weight on its lip that sinks it back down.",
+      "shot": 5
+    },
+    {
+      "text": "Back at depth, the bladder compresses again,",
+      "shot": 6
+    },
+    {
+      "text": "and your bass swims off.",
+      "shot": 6
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "boat",
+      "subject": "bass",
+      "action": "bass strikes a crankbait under the boat as the angler sets the hook",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 4.6
+    },
+    {
+      "n": 2,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "bass hangs in deep water, then starts to rise on the line",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 3.8
+    },
+    {
+      "n": 3,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "bass is reeled up fast toward the surface",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 3.6
+    },
+    {
+      "n": 4,
+      "scene": "cutaway",
+      "subject": "bass swim bladder",
+      "action": "swim bladder inflates and the belly bulges",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 8.6
+    },
+    {
+      "n": 5,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "bass is lowered back down with a descending device and sinks deeper",
+      "camera": "orbit",
+      "counter": null,
+      "est_seconds": 5.6
+    },
+    {
+      "n": 6,
+      "scene": "underwater",
+      "subject": "bass",
+      "action": "bass swims past the camera and away",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 4.4
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "Below about thirty feet, the trip up can hurt it.",
+      "source_id": "src-sdgfp-30ft"
+    },
+    {
+      "text": "As you crank it up, the water pressure drops fast. Its swim bladder, a gas-filled organ, starts to expand.",
+      "source_id": "src-agfc-bladder"
+    },
+    {
+      "text": "And a bass has no outlet to vent that gas.",
+      "source_id": "src-sdgfp-noduct"
+    },
+    {
+      "text": "Its eyes bulge and its belly swells.",
+      "source_id": "src-agfc-signs"
+    },
+    {
+      "text": "The fix is a descending device, a weight on its lip that sinks it back down.",
+      "source_id": "src-ndgf-descend"
+    },
+    {
+      "text": "Back at depth, the bladder compresses again.",
+      "source_id": "src-ndgf-compress"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "jig",
+      "minutes": 0,
+      "cost_usd": 0,
+      "at": "2026-10-18T17:00:00Z"
+    }
+  ]
+}

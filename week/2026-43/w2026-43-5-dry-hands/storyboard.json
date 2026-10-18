@@ -1,0 +1,231 @@
+{
+  "id": "w2026-43-5-dry-hands",
+  "format": "what-happens-if",
+  "title": "What Happens When You Grab a Bass With Dry Hands?",
+  "hook": "You've been holding bass wrong, and it starts with dry hands.",
+  "style": "clay",
+  "script": "You've been holding bass wrong, and it starts with dry hands. Dry hands strip the fish's protective slime, which raises its risk of infection and disease. Fingers under the gill cover or in the eye sockets? Never. A hot engine cover or carpeted deck? Also no. Even wet cloth gloves may rub off extra slime and spread disease from fish to fish. So wet your bare hands, grip the lower jaw without bending it back, and keep it out no longer than you can hold your breath.",
+  "lines": [
+    {
+      "text": "You've been holding",
+      "shot": 1
+    },
+    {
+      "text": "bass wrong,",
+      "shot": 1
+    },
+    {
+      "text": "and it starts",
+      "shot": 1
+    },
+    {
+      "text": "with dry hands.",
+      "shot": 1
+    },
+    {
+      "text": "Dry hands strip",
+      "shot": 2
+    },
+    {
+      "text": "the fish's protective slime,",
+      "shot": 2
+    },
+    {
+      "text": "which raises its",
+      "shot": 2
+    },
+    {
+      "text": "risk of infection",
+      "shot": 2
+    },
+    {
+      "text": "and disease.",
+      "shot": 2
+    },
+    {
+      "text": "Fingers under the",
+      "shot": 3
+    },
+    {
+      "text": "gill cover or",
+      "shot": 3
+    },
+    {
+      "text": "in the eye",
+      "shot": 3
+    },
+    {
+      "text": "sockets? Never.",
+      "shot": 3
+    },
+    {
+      "text": "A hot engine",
+      "shot": 3
+    },
+    {
+      "text": "cover or carpeted deck?",
+      "shot": 3
+    },
+    {
+      "text": "Also no.",
+      "shot": 3
+    },
+    {
+      "text": "Even wet cloth",
+      "shot": 4
+    },
+    {
+      "text": "gloves may rub",
+      "shot": 4
+    },
+    {
+      "text": "off extra slime",
+      "shot": 4
+    },
+    {
+      "text": "and spread disease",
+      "shot": 4
+    },
+    {
+      "text": "from fish to fish.",
+      "shot": 4
+    },
+    {
+      "text": "So wet your",
+      "shot": 5
+    },
+    {
+      "text": "bare hands,",
+      "shot": 5
+    },
+    {
+      "text": "grip the lower",
+      "shot": 5
+    },
+    {
+      "text": "jaw without bending",
+      "shot": 5
+    },
+    {
+      "text": "it back,",
+      "shot": 5
+    },
+    {
+      "text": "and keep it",
+      "shot": 5
+    },
+    {
+      "text": "out no longer",
+      "shot": 5
+    },
+    {
+      "text": "than you can",
+      "shot": 5
+    },
+    {
+      "text": "hold your breath.",
+      "shot": 5
+    }
+  ],
+  "shots": [
+    {
+      "n": 1,
+      "scene": "boat",
+      "subject": "bass",
+      "action": "Dry hand closing around a bass at frame 0.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 3.6
+    },
+    {
+      "n": 2,
+      "scene": "cutaway",
+      "subject": "bass:slime-coat",
+      "action": "Close cutaway of the skin: a glossy slime layer peels away where the dry palm touches; red specks of infection risk appear.",
+      "camera": "push-in",
+      "counter": null,
+      "est_seconds": 5.4
+    },
+    {
+      "n": 3,
+      "scene": "boat",
+      "subject": "bass",
+      "action": "Hard cut in: quick X marks over fingers under a gill cover, a hot engine cover and a carpeted deck.",
+      "camera": "pan",
+      "counter": null,
+      "est_seconds": 6.8
+    },
+    {
+      "n": 4,
+      "scene": "studio",
+      "subject": "glove",
+      "action": "A wet cloth glove holds a bass; slime smears onto the fabric and glowing specks hop to a second fish.",
+      "camera": "orbit",
+      "counter": null,
+      "est_seconds": 5.6
+    },
+    {
+      "n": 5,
+      "scene": "boat",
+      "subject": "angler",
+      "action": "Wet bare hand grips the lower jaw, the body stays level, a breath-hold timer runs, the bass goes back in. Cut to black on the last word.",
+      "camera": "pull-out",
+      "counter": null,
+      "est_seconds": 8.6
+    }
+  ],
+  "ending": "payoff",
+  "question": null,
+  "claims": [
+    {
+      "text": "Dry hands remove a fish's protective slime, raising the risk of infection and disease.",
+      "source_id": "src-tpwd-cr-slime"
+    },
+    {
+      "text": "Never hold a fish with fingers under the gill cover or in the eye sockets.",
+      "source_id": "src-tpwd-cr-gill"
+    },
+    {
+      "text": "Avoid hot surfaces like engine covers.",
+      "source_id": "src-tpwd-cr-hot"
+    },
+    {
+      "text": "Carpeted decks can be abrasive.",
+      "source_id": "src-tpwd-cr-carpet"
+    },
+    {
+      "text": "Wet cloth gloves may remove extra slime and spread disease between fish.",
+      "source_id": "src-tpwd-cr-gloves"
+    },
+    {
+      "text": "Hands should be bare or in smooth rubber gloves.",
+      "source_id": "src-tpwd-cr-bare"
+    },
+    {
+      "text": "Hold black bass by the lower jaw without hyper-extending it.",
+      "source_id": "src-tpwd-cr-jaw"
+    },
+    {
+      "text": "Keep a fish out of water no longer than you can hold your breath.",
+      "source_id": "src-tpwd-cr-breath"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voice": null
+  },
+  "log": [
+    {
+      "step": "sonar",
+      "minutes": 8,
+      "cost_usd": 0,
+      "at": "2026-10-18T12:20:00-05:00"
+    },
+    {
+      "step": "jig",
+      "minutes": 12,
+      "cost_usd": 0,
+      "at": "2026-10-18T13:05:00-05:00"
+    }
+  ]
+}

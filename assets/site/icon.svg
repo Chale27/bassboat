@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4a3c"/><stop offset=".55" stop-color="#e8742c"/><stop offset=".6" stop-color="#f6b25c"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a6f8f"/><stop offset="1" stop-color="#123a4d"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#sky)"/>
+  <circle cx="256" cy="300" r="78" fill="#ffd79a"/>
+  <path d="M0 290 L60 250 L110 275 L170 232 L230 268 L300 240 L360 270 L420 236 L512 280 L512 300 L0 300Z" fill="#163b2f"/>
+  <path d="M0 300 H512 V400 Q512 512 400 512 H112 Q0 512 0 400Z" fill="url(#lake)"/>
+  <path d="M196 330 H316 M216 352 H296 M236 374 H276" stroke="#f6b25c" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M110 296 H402 L370 336 H150 Z" fill="#0f2620"/>
+  <path d="M300 296 V262 H332 L344 296Z" fill="#0f2620"/>
+  <g transform="translate(256 150)">
+    <path d="M-92 0 Q-40 -46 34 -22 L70 -40 L64 0 L70 40 L34 22 Q-40 46 -92 0Z" fill="#2f6b3f" stroke="#0f2620" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="-62" cy="-6" r="7" fill="#0f2620"/>
+    <path d="M-92 0 Q-80 6 -66 8" stroke="#0f2620" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M-30 -10 L20 -6 M-30 8 L20 6" stroke="#9cc58a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

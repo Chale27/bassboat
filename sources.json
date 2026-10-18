@@ -1,0 +1,533 @@
+[
+  {
+    "id": "src-sdgfp-30ft",
+    "claim": "Barotrauma effects can start when fish are caught from deeper than about 30 feet.",
+    "url": "https://gfp.sd.gov/userdocs/docs/barotrauma_article.pdf",
+    "title": "Catching Fish from Deep Water - Barotrauma",
+    "publisher": "South Dakota Game, Fish and Parks",
+    "checkedAt": "2026-10-18",
+    "quote": "Under 30 feet is generally considered safe, and over 30 feet is when barotrauma effects can start being present."
+  },
+  {
+    "id": "src-agfc-bladder",
+    "claim": "The rapid pressure change as a fish is reeled up makes its swim bladder expand.",
+    "url": "https://www.agfc.com/news/deep-trouble-protecting-your-catch-from-barotrauma/",
+    "title": "Deep trouble: Protecting your catch from barotrauma",
+    "publisher": "Arkansas Game and Fish Commission",
+    "checkedAt": "2026-10-18",
+    "quote": "The rapid change in water pressure causes their swim bladder (an internal gas-filled organ that regulates buoyancy) to expand"
+  },
+  {
+    "id": "src-sdgfp-noduct",
+    "claim": "Bass have no physical outlet to vent gas from the gas (swim) bladder.",
+    "url": "https://gfp.sd.gov/userdocs/docs/barotrauma_article.pdf",
+    "title": "Catching Fish from Deep Water - Barotrauma",
+    "publisher": "South Dakota Game, Fish and Parks",
+    "checkedAt": "2026-10-18",
+    "quote": "Many fish species, such as walleye, bass, and sunfish, do not have a physical outlet to the gas bladder"
+  },
+  {
+    "id": "src-sdgfp-slow",
+    "claim": "In bass the gas leaves slowly, diffusing into the blood and out through the gills.",
+    "url": "https://gfp.sd.gov/userdocs/docs/barotrauma_article.pdf",
+    "title": "Catching Fish from Deep Water - Barotrauma",
+    "publisher": "South Dakota Game, Fish and Parks",
+    "checkedAt": "2026-10-18",
+    "quote": "pressure is regulated by gas diffusing through the bladder and into the blood stream through a valve, and eventually being released through the gills"
+  },
+  {
+    "id": "src-agfc-signs",
+    "claim": "Signs of barotrauma include bulging eyes, a swollen belly and the fish floating upside down or on its side.",
+    "url": "https://www.agfc.com/news/deep-trouble-protecting-your-catch-from-barotrauma/",
+    "title": "Deep trouble: Protecting your catch from barotrauma",
+    "publisher": "Arkansas Game and Fish Commission",
+    "checkedAt": "2026-10-18",
+    "quote": "Bulging eyes, a swollen belly, fish floating upside down or on its side, and even internal organs protruding through the throat"
+  },
+  {
+    "id": "src-ndgf-prey",
+    "claim": "Fish that cannot submerge risk being struck by boats and eaten by birds.",
+    "url": "https://gf.nd.gov/magazine/2021/jul/understanding-barotrauma",
+    "title": "Understanding Barotrauma",
+    "publisher": "North Dakota Game and Fish Department",
+    "checkedAt": "2026-10-18",
+    "quote": "being struck by boats or increased predation as they become easy prey for birds like gulls or pelicans"
+  },
+  {
+    "id": "src-ndgf-descend",
+    "claim": "A descending device is a weight attached to the fish's lip that sinks it back to its original depth.",
+    "url": "https://gf.nd.gov/magazine/2021/jul/understanding-barotrauma",
+    "title": "Understanding Barotrauma",
+    "publisher": "North Dakota Game and Fish Department",
+    "checkedAt": "2026-10-18",
+    "quote": "a weight attached to the fish’s lip that sinks them to their original depth for release"
+  },
+  {
+    "id": "src-ndgf-compress",
+    "claim": "Returning the fish to depth recompresses the swim bladder.",
+    "url": "https://gf.nd.gov/magazine/2021/jul/understanding-barotrauma",
+    "title": "Understanding Barotrauma",
+    "publisher": "North Dakota Game and Fish Department",
+    "checkedAt": "2026-10-18",
+    "quote": "quickly compress the swim bladder to its original pressure"
+  },
+  {
+    "id": "src-ndgf-limits",
+    "claim": "Descending only treats the swim bladder and does not reverse other internal injuries.",
+    "url": "https://gf.nd.gov/magazine/2021/jul/understanding-barotrauma",
+    "title": "Understanding Barotrauma",
+    "publisher": "North Dakota Game and Fish Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Venting or descending only address the swim bladder symptom of barotrauma, and do not reverse other potentially fatal injuries"
+  },
+  {
+    "id": "src-tpwd-lw-warm",
+    "claim": "Warm water holds less oxygen than cool water.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Warmer water naturally holds less oxygen than cooler water."
+  },
+  {
+    "id": "src-tpwd-lw-metab",
+    "claim": "Bass use more oxygen in warm water because their metabolism is higher.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Bass also consume more oxygen at warmer temperatures due to higher metabolism."
+  },
+  {
+    "id": "src-tpwd-lw-noaer",
+    "claim": "In warm months, livewell oxygen drops fast with no aeration.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "during warmer months, potential oxygen depletion in livewells is rapid with no aeration"
+  },
+  {
+    "id": "src-tpwd-lw-test",
+    "claim": "In TPWD tests with five bass (14-17 lb), oxygen was stressful after 12-15 minutes and projected lethal at 30 minutes.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "oxygen levels were stressful (< 5 ppm) after 12-15 minutes and were projected to be lethal at 30 minutes"
+  },
+  {
+    "id": "src-tpwd-lw-delay",
+    "claim": "Oxygen-stressed bass may be alive at weigh-in but often die 24 to 48 hours after release.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "may be alive at weigh-in but often die within 24 to 48 hours after release"
+  },
+  {
+    "id": "src-tpwd-lw-ice",
+    "claim": "Ice cools livewell water, and cooler water holds more oxygen.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Ice should be used to cool livewell water 5 to 10˚F. Cooler water holds more oxygen"
+  },
+  {
+    "id": "src-tpwd-lw-o2",
+    "claim": "An oxygen injection system can keep livewell oxygen sufficient even in extreme conditions.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/livewell.phtml",
+    "title": "Catch and Release Guidelines: Livewell Management and Oxygen Injection",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "an oxygen injection system can maintain sufficient oxygen levels in livewells, even under the most extreme conditions"
+  },
+  {
+    "id": "src-fobert-esoph",
+    "claim": "A deeply swallowed hook can lodge in the esophagus.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "characterized by the hook penetrating the esophagus, gills or other sensitive tissue beyond the mouth cavity"
+  },
+  {
+    "id": "src-fobert-determinant",
+    "claim": "Deep hooking is perhaps the single most important factor in injury and death of released fish.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "deep hooking is perhaps the single most important determinant of injury and post-release mortality in recreational fisheries"
+  },
+  {
+    "id": "src-serc-bluegill",
+    "claim": "Bluegill belong to the family Centrarchidae, the sunfishes and black basses.",
+    "url": "https://invasions.si.edu/nemesis/species_summary/168141",
+    "title": "Lepomis macrochirus species summary (NEMESIS)",
+    "publisher": "Smithsonian Environmental Research Center",
+    "checkedAt": "2026-10-18",
+    "quote": "a medium sized freshwater ray-finned fish from the family Centrarchidae, also know as sunfishes and black basses"
+  },
+  {
+    "id": "src-afs-sunfish",
+    "claim": "Largemouth bass are in the sunfish family, Centrarchidae.",
+    "url": "https://units.fisheries.org/habitat/angling-for-nesting-largemouth-bass-can-have-negative-effects-on-spawning-success/",
+    "title": "Angling for nesting largemouth bass can have negative effects on spawning success",
+    "publisher": "American Fisheries Society, Fish Habitat Section",
+    "checkedAt": "2026-10-18",
+    "quote": "a highly prized freshwater gamefish in the sunfish family, Centrarchidae"
+  },
+  {
+    "id": "src-fobert-removed",
+    "claim": "In the bluegill study, 44% of deeply hooked fish died within 10 days when the hook was removed.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "the highest mortality levels in fish for which the hook was removed (33% after 48h and 44% after 10 days)"
+  },
+  {
+    "id": "src-fobert-cut",
+    "claim": "When the line was cut, mortality was about 12.5% after 10 days.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "intermediate for the line-cut treatment (8% after 48h and 12.5% after 10 days)"
+  },
+  {
+    "id": "src-fobert-expel",
+    "claim": "Most line-cut fish (71.4%) had expelled the hook by the end of the 10-day study.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "at the end of the 10 day study, 71.4% had expelled the hook"
+  },
+  {
+    "id": "src-fobert-conclusion",
+    "claim": "Cutting the line is a more effective release method than removing the hook for deeply hooked fish.",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165783609001015",
+    "title": "Cut the line or remove the hook? An evaluation of sublethal and lethal endpoints for deeply hooked bluegill (Fobert et al. 2009, Fisheries Research 99:38-46)",
+    "publisher": "Fisheries Research (Elsevier)",
+    "checkedAt": "2026-10-18",
+    "quote": "cutting the line is a more effective release method than removing the hook when fish are deeply hooked"
+  },
+  {
+    "id": "src-oc-tenmin",
+    "claim": "With the guarding male gone, predators eat about half the brood within ten minutes.",
+    "url": "https://www.outdoorcanada.ca/fishing-for-nesting-bass/",
+    "title": "New Science Shows Intense Harm Cased by Fishing for Nesting Bass",
+    "publisher": "Outdoor Canada (Gord Pyzer, quoting Dr. David Philipp, Illinois Natural History Survey)",
+    "checkedAt": "2026-10-18",
+    "quote": "his brood is quickly consumed by brood predators (approximately 50 per cent after ten minutes of male absence)"
+  },
+  {
+    "id": "src-afs-fan",
+    "claim": "Male largemouth bass fan out the nest with their tails.",
+    "url": "https://units.fisheries.org/habitat/angling-for-nesting-largemouth-bass-can-have-negative-effects-on-spawning-success/",
+    "title": "Angling for nesting largemouth bass can have negative effects on spawning success",
+    "publisher": "American Fisheries Society, Fish Habitat Section",
+    "checkedAt": "2026-10-18",
+    "quote": "they use their tails to fan a circular depression in the bottom"
+  },
+  {
+    "id": "src-afs-guard",
+    "claim": "After spawning, the female leaves and the male guards the nest.",
+    "url": "https://units.fisheries.org/habitat/angling-for-nesting-largemouth-bass-can-have-negative-effects-on-spawning-success/",
+    "title": "Angling for nesting largemouth bass can have negative effects on spawning success",
+    "publisher": "American Fisheries Society, Fish Habitat Section",
+    "checkedAt": "2026-10-18",
+    "quote": "the female returns to deeper water and the male guards the nest"
+  },
+  {
+    "id": "src-afs-weeks",
+    "claim": "The male keeps protecting the brood for several weeks after hatching.",
+    "url": "https://units.fisheries.org/habitat/angling-for-nesting-largemouth-bass-can-have-negative-effects-on-spawning-success/",
+    "title": "Angling for nesting largemouth bass can have negative effects on spawning success",
+    "publisher": "American Fisheries Society, Fish Habitat Section",
+    "checkedAt": "2026-10-18",
+    "quote": "After hatching, the male will continue to protect the brood for several weeks"
+  },
+  {
+    "id": "src-afs-predators",
+    "claim": "Nest predators include bluegill, pumpkinseed and rock bass.",
+    "url": "https://units.fisheries.org/habitat/angling-for-nesting-largemouth-bass-can-have-negative-effects-on-spawning-success/",
+    "title": "Angling for nesting largemouth bass can have negative effects on spawning success",
+    "publisher": "American Fisheries Society, Fish Habitat Section",
+    "checkedAt": "2026-10-18",
+    "quote": "predators such as bluegill (Lepomis macrochirus), pumpkinseed (Lepomis gibbosus), and rock bass"
+  },
+  {
+    "id": "src-oc-cr",
+    "claim": "Catching and releasing a guarding male still leads to partial loss of the brood while he is off the nest.",
+    "url": "https://www.outdoorcanada.ca/fishing-for-nesting-bass/",
+    "title": "New Science Shows Intense Harm Cased by Fishing for Nesting Bass",
+    "publisher": "Outdoor Canada (Gord Pyzer, quoting Dr. David Philipp, Illinois Natural History Survey)",
+    "checkedAt": "2026-10-18",
+    "quote": "Catch-and-release angling of a guarding male results in partial consumption while he is off the nest"
+  },
+  {
+    "id": "src-oc-harvest",
+    "claim": "Keeping a guarding male destroys the whole brood.",
+    "url": "https://www.outdoorcanada.ca/fishing-for-nesting-bass/",
+    "title": "New Science Shows Intense Harm Cased by Fishing for Nesting Bass",
+    "publisher": "Outdoor Canada (Gord Pyzer, quoting Dr. David Philipp, Illinois Natural History Survey)",
+    "checkedAt": "2026-10-18",
+    "quote": "Harvest of a guarding male results in 100-percent brood destruction."
+  },
+  {
+    "id": "src-tpwd-cr-slime",
+    "claim": "Dry hands remove a fish's protective slime, raising the risk of infection and disease.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Dry hands remove protective slime from fishes, which leads to increased risk of infection and disease."
+  },
+  {
+    "id": "src-tpwd-cr-gill",
+    "claim": "Never hold a fish with fingers under the gill cover or in the eye sockets.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Never pick up a fish by placing fingers under the gill cover or in the eye sockets."
+  },
+  {
+    "id": "src-tpwd-cr-hot",
+    "claim": "Avoid putting fish on hot surfaces like engine covers.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "No hot surfaces like engine covers or sun-drenched boat decks."
+  },
+  {
+    "id": "src-tpwd-cr-carpet",
+    "claim": "Carpeted decks can be abrasive to fish, even when wet.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Carpeted decks may be abrasive, even when wet."
+  },
+  {
+    "id": "src-tpwd-cr-gloves",
+    "claim": "Wet cloth gloves may remove extra slime and spread disease between fish.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Wet cloth gloves may provide a better grip, but may remove additional slime and transfer disease organisms from one fish to another."
+  },
+  {
+    "id": "src-tpwd-cr-bare",
+    "claim": "Hands should be bare or in smooth rubber gloves.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Hands should be bare or in smooth rubber gloves."
+  },
+  {
+    "id": "src-tpwd-cr-jaw",
+    "claim": "Hold black bass by the lower jaw without hyper-extending it.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Grasp black bass by the lower jaw. Do not hyper-extend the jaw."
+  },
+  {
+    "id": "src-tpwd-cr-breath",
+    "claim": "Keep a fish out of water no longer than you can hold your breath.",
+    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/catchrelease/bassconserve.phtml",
+    "title": "Catch and Release Guidelines: To Reduce Mortality in Black Basses and Other Fishes",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "A good rule of thumb is not to keep it out longer than you can hold your breath."
+  },
+  {
+    "id": "src-tpwd-lmb-jaw",
+    "claim": "A largemouth bass's upper jaw reaches past the rear of its eye.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Their upper jaw reaches far beyond the rear margin of the eye."
+  },
+  {
+    "id": "src-tpwd-lmb-fry",
+    "claim": "Largemouth fry eat zooplankton and become active predators at about two inches.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Fry feed primarily on zooplankton and insect larvae. At about two inches in length they become active predators."
+  },
+  {
+    "id": "src-tpwd-lmb-eggs",
+    "claim": "A female largemouth lays roughly 2,000 to 43,000 eggs in a nest.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "once the female has laid eggs in the nest (2,000 to 43,000)"
+  },
+  {
+    "id": "src-tpwd-lmb-male",
+    "claim": "The male chases the female away and guards the eggs.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "she is chased away by the male who then guards the precious eggs"
+  },
+  {
+    "id": "src-tpwd-lmb-cannibal",
+    "claim": "Larger largemouth bass prey on smaller bass.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Larger fish prey upon smaller bass."
+  },
+  {
+    "id": "src-vadwr-lowlight",
+    "claim": "Largemouth bass are especially voracious in low light.",
+    "url": "https://dwr.virginia.gov/wildlife/information/largemouth-bass/",
+    "title": "Largemouth Bass",
+    "publisher": "Virginia Department of Wildlife Resources",
+    "checkedAt": "2026-10-18",
+    "quote": "While Largemouth Bass will feed throughout the day, they are especially voracious during low light hours."
+  },
+  {
+    "id": "src-tpwd-lmb-range",
+    "claim": "Largemouth bass are native east of the Rockies and have been introduced worldwide.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Largemouth bass were originally distributed throughout most of what is now the United States east of the Rockies"
+  },
+  {
+    "id": "src-tpwd-lmb-world",
+    "claim": "Largemouth bass have been introduced to many areas worldwide.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/lmb/",
+    "title": "Largemouth Bass (Micropterus salmoides)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "the species has been introduced into many other areas worldwide"
+  },
+  {
+    "id": "src-strib-record",
+    "claim": "George Perry's 22 lb 4 oz largemouth from 1932 is the all-tackle record, tied by Manabu Kurita in 2009.",
+    "url": "https://www.startribune.com/new-co-world-record-22-4-largemouth-bass-recognized-by-igfa/81022692",
+    "title": "New co-world record 22-4 largemouth bass recognized by IGFA",
+    "publisher": "Minnesota Star Tribune",
+    "checkedAt": "2026-10-18",
+    "quote": "Kurita's fish ties the current record held for over 77 years by Perry who caught his bass on Georgia's Montgomery Lake, June 2, 1932"
+  },
+  {
+    "id": "src-strib-weight",
+    "claim": "The record weight is 22 lb 4 oz.",
+    "url": "https://www.startribune.com/new-co-world-record-22-4-largemouth-bass-recognized-by-igfa/81022692",
+    "title": "New co-world record 22-4 largemouth bass recognized by IGFA",
+    "publisher": "Minnesota Star Tribune",
+    "checkedAt": "2026-10-18",
+    "quote": "Using certified scales, his fish weighed in at 10.12 kg or 22 lb 4 oz."
+  },
+  {
+    "id": "src-tpwd-smb-bars",
+    "claim": "Smallmouth bass have dark vertical bands instead of a horizontal stripe.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "generally green with dark vertical bands rather than a horizontal band along the side"
+  },
+  {
+    "id": "src-tpwd-smb-jaw",
+    "claim": "A smallmouth's upper jaw never extends beyond the eye.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "the upper jaw never extends beyond the eye"
+  },
+  {
+    "id": "src-tpwd-smb-greek",
+    "claim": "Micropterus is Greek for 'small fin'.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Micropterus is Greek meaning \"small fin\""
+  },
+  {
+    "id": "src-tpwd-smb-dolomieu",
+    "claim": "The species name dolomieu honors French mineralogist Dolomieu.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "The species epithet dolomieu refers to the French mineralogist M. Dolomieu."
+  },
+  {
+    "id": "src-tpwd-smb-names",
+    "claim": "Smallmouth are also called brownie and bronze bass.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Brown Bass, Brownie, Bronze Bass"
+  },
+  {
+    "id": "src-tpwd-smb-females",
+    "claim": "A male smallmouth may spawn with several females on one nest.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Males may spawn with several females on a single nest."
+  },
+  {
+    "id": "src-tpwd-smb-eggs",
+    "claim": "A smallmouth nest may hold as many as 10,000 eggs.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "nests may contain as many as 10,000 eggs"
+  },
+  {
+    "id": "src-tpwd-smb-hatch",
+    "claim": "In mid-70s F water, smallmouth eggs can hatch in 2-3 days.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "can hatch in 2-3 days if temperatures are in the mid-70's (°F)"
+  },
+  {
+    "id": "src-tpwd-smb-guard",
+    "claim": "Male smallmouth guard the nest for up to a month.",
+    "url": "https://tpwd.texas.gov/huntwild/wild/species/smb/",
+    "title": "Smallmouth Bass (Micropterus dolomieu)",
+    "publisher": "Texas Parks and Wildlife Department",
+    "checkedAt": "2026-10-18",
+    "quote": "Males guard the nest from the time eggs are laid until fry begin to disperse, a period of up to a month."
+  },
+  {
+    "id": "src-twra-record",
+    "claim": "The world-record smallmouth, 11 lb 15 oz, was caught at Dale Hollow in 1955.",
+    "url": "https://www.tn.gov/twra/fishing/where-to-fish/cumberland-plateau-r3/dale-hollow-reservoir.html",
+    "title": "Dale Hollow Reservoir",
+    "publisher": "Tennessee Wildlife Resources Agency",
+    "checkedAt": "2026-10-18",
+    "quote": "The state/world record smallmouth bass, caught in 1955 at Dale Hollow by David Hayes and weighing 11lb. 15oz., still stands today."
+  }
+]
