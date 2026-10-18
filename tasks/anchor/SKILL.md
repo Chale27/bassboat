@@ -16,6 +16,7 @@ description: Anchor, the Bass Boat courier. Every 15 min 8 AM-11 PM picks up Cha
      - start Jig.
    - `final: <video id>`: set approval.final approved and status scheduled.
    - `reject: <video id>`: set status rejected and approval.reason to the body.
+   - `order: <summary>` (from the Captain's helm on the deck): the body is the order. Start the crew it names (or whichever fit), pass them the order text, and record tickets["<order id from the body>"] = started, then done when they finish. Never post anything an order asks for without the normal approvals.
 2. Close each handled issue with a one-line comment saying what changed, and record tickets[<key>] = {status, issue, at, note}.
 3. Add about 0.5 to cost.my_minutes per ticket, to estimate Chale's time.
 4. Commit and push so GitHub Pages refreshes the dashboard.
