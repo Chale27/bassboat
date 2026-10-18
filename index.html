@@ -11,6 +11,7 @@
 <link rel="icon" href="assets/site/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/site/icon.svg">
 <link rel="manifest" href="assets/site/manifest.webmanifest">
+<link rel="stylesheet" href="assets/site/boat.css">
 <style>
 :root{
   --bg:#f3efe6; --card:#fffdf8; --card2:#eef3ee; --ink:#13261f; --muted:#56685f; --line:#d5ddd3;
@@ -126,6 +127,38 @@ footer{margin-top:36px;color:var(--muted);font-size:12px;text-align:center}
 </style>
 </head>
 <body>
+<section class="stage" aria-label="The boat">
+  <div id="scene" aria-label="Bass Boat: a 3D bass boat on the lake and the pixel-art deck aboard, where the crew works their stations. Tap a crew member to see their station, or the Captain to give the crew an order.">
+    <canvas id="deck" width="320" height="240" aria-hidden="true"></canvas>
+    <div class="st-overlay" id="st-overlay"></div>
+    <button class="st-btn st-back" id="st-back" type="button">&larr; Back to the lake</button>
+    <button class="st-btn st-sound" id="st-sound" type="button" aria-pressed="false">&#128264; Sound off</button>
+    <div id="outside">
+      <div class="out-title">Bass Boat <small>drag to look around</small></div>
+      <button class="board-hint" id="st-hint" type="button">Click the boat to climb aboard</button>
+      <div class="out-controls">
+        <button class="st-btn ghost" id="st-day" type="button" aria-pressed="true">&#9728; Day</button>
+        <button class="st-btn ghost" id="st-fog" type="button" aria-pressed="false">&#127787; Fog</button>
+        <button class="st-btn ghost" id="st-rain" type="button" aria-pressed="false">&#9730; Rain</button>
+      </div>
+      <div class="st-loading" id="st-loading">Launching the boat&hellip;</div>
+    </div>
+    <div id="st-fade"></div>
+    <div class="st-order" id="st-order" hidden role="dialog" aria-modal="false" aria-labelledby="st-order-title">
+      <div class="st-order-top"><b id="st-order-title">Order for the Captain</b><button class="x" id="st-order-close" type="button" aria-label="Close">&#10005;</button></div>
+      <form id="st-order-form">
+        <label for="st-order-text">What should the crew do?</label>
+        <textarea id="st-order-text" rows="3" maxlength="1200" placeholder="Scout three deep-water ideas and script the best one"></textarea>
+        <button class="st-btn" id="st-order-send" type="submit">Send to the helm</button>
+      </form>
+      <div class="st-out" id="st-order-out" hidden aria-live="polite"></div>
+    </div>
+    <div class="st-order" id="st-crew" hidden role="dialog" aria-modal="false" aria-labelledby="st-crew-title">
+      <div class="st-order-top"><b id="st-crew-title">Crew</b><button class="x" id="st-crew-close" type="button" aria-label="Close">&#10005;</button></div>
+      <div id="st-crew-body" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
 <header class="hero" aria-label="Bass Boat">
   <svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <defs>
@@ -278,6 +311,8 @@ function render() {
   renderScore(videos);
   renderFormats();
   renderTickets();
+  window.BB_DATA = DATA;
+  window.dispatchEvent(new CustomEvent("bassboat:data", { detail: DATA }));
 }
 function fill(id, ...nodes) { const el = document.getElementById(id); el.replaceChildren(...nodes.flat().filter(Boolean)); return el; }
 function setCount(secId, n) { const h2 = document.querySelector("#" + secId + " h2"); let c = h2.querySelector(".count"); if (!c) { c = h("span", { class: "count" }); h2.append(c); } c.textContent = String(n); }
@@ -477,7 +512,11 @@ function renderTickets() {
     try { localStorage.setItem("bb-theme", root.dataset.theme); } catch (e) {}
   });
 })();
+window.BassBoat = { GH_REPO, issueUrl, bodies, FOOT };
 boot();
 </script>
+<script src="assets/site/vendor/three.min.js"></script>
+<script src="assets/site/vendor/OrbitControls.js"></script>
+<script src="assets/site/boat.js"></script>
 </body>
 </html>

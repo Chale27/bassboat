@@ -1,0 +1,102 @@
+/* Bass Boat stage: a 3D boat on the lake (three.js) and the pixel-art deck aboard.
+   Modeled on Agent Ramen's ramen-stand stage. Scoped to .stage so dashboard tokens are untouched. */
+.stage {
+  --st-ink: #1b1510; --st-paper: #fbefd6; --st-paper2: #ecd8ae; --st-text: #2b2116; --st-muted: #6f5c47;
+  --st-accent: #b8352a; --st-accent-ink: #fff8ea; --st-gold: #ffd45a; --st-cream: #fff8ea; --st-code: #f1e1c4;
+  --st-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Courier New", monospace;
+  width: min(100%, 1120px, calc((100vh - 150px) * 4 / 3)); min-width: min(100%, 320px);
+  margin: 16px auto 0; border: 4px solid var(--st-ink); border-radius: 6px; overflow: hidden;
+  background: #183b4a; box-shadow: 0 6px 0 rgba(20, 30, 26, .22); position: relative;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stage {
+  --st-ink: #050b09; --st-paper: #1b2723; --st-paper2: #2a3b35; --st-text: #eaf1ec; --st-muted: #a3b5aa;
+  --st-accent: #d4553b; --st-cream: #22322d; --st-code: #13201c;
+} }
+:root[data-theme="dark"] .stage {
+  --st-ink: #050b09; --st-paper: #1b2723; --st-paper2: #2a3b35; --st-text: #eaf1ec; --st-muted: #a3b5aa;
+  --st-accent: #d4553b; --st-cream: #22322d; --st-code: #13201c;
+}
+#scene { position: relative; aspect-ratio: 4 / 3; width: 100%; overflow: hidden; background: #183b4a; }
+#deck { position: absolute; inset: 0; width: 100%; height: 100%; display: block; image-rendering: pixelated; image-rendering: crisp-edges; cursor: default; touch-action: manipulation; }
+.st-overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+.st-btn { font: 700 14px var(--st-font); letter-spacing: .02em; color: var(--st-accent-ink); background: var(--st-accent); border: 3px solid var(--st-ink); border-radius: 4px; padding: 6px 14px; cursor: pointer; box-shadow: 0 3px 0 var(--st-ink); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; min-height: 36px; }
+.st-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--st-ink); }
+.st-btn.ghost { background: var(--st-cream); color: var(--st-text); }
+.st-btn:disabled { opacity: .7; cursor: wait; }
+.stage button:focus-visible, .stage a:focus-visible, .stage textarea:focus-visible { outline: 3px solid var(--st-gold); outline-offset: 2px; }
+
+/* name tags over the pixel crew */
+.st-tag { position: absolute; transform: translate(-50%, -100%); pointer-events: auto; cursor: pointer; font: 700 clamp(10px, 1.25vw, 14px)/1.45 var(--st-font); color: var(--st-gold); background: rgba(20, 16, 12, .86); border: 0; padding: 0 5px; white-space: nowrap; min-height: 0; }
+.st-tag.captain { color: #fff; background: #b8352a; }
+.st-tag::before { content: ""; display: inline-block; width: .55em; height: .55em; border-radius: 50%; margin-right: .35em; vertical-align: .05em; background: #8d949b; box-shadow: 0 0 0 1px #000; }
+.st-tag.captain::before { background: #ffd45a; }
+.st-tag[data-state="ok"]::before { background: #5fd35f; }
+.st-tag[data-state="needs_you"]::before { background: #ff5a3d; box-shadow: 0 0 6px #ff5a3d; }
+.st-tag[data-state="running"]::before { background: #ffd45a; animation: st-blink .9s steps(2) infinite; }
+.st-tag[data-state="idle"]::before { background: #8d949b; }
+.st-tag::after { content: ""; position: absolute; inset: -8px -4px; } /* bigger touch target */
+@keyframes st-blink { 50% { opacity: .25; } }
+
+.st-back { position: absolute; left: 8px; top: 8px; z-index: 3; font-size: 12px; padding: 3px 9px; min-height: 30px; }
+.st-sound { position: absolute; right: 8px; top: 8px; z-index: 8; font-size: 12px; padding: 3px 9px; min-height: 30px; background: var(--st-cream); color: var(--st-text); }
+.st-sound[aria-pressed="true"] { background: var(--st-gold); color: #1b1510; }
+
+/* outside: the 3D lake */
+#outside { position: absolute; inset: 0; z-index: 5; background: #8fbfe0; }
+#outside[hidden] { display: none; }
+#outside canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+.out-title { position: absolute; left: 12px; top: 10px; font: 800 clamp(17px, 2.6vw, 30px)/1.05 var(--st-font); color: #fffaf0; pointer-events: none; text-shadow: 0 2px 0 rgba(10, 20, 30, .55), 0 0 10px rgba(10, 20, 30, .35); }
+.out-title small { display: block; font: 600 clamp(10px, 1.1vw, 12px) var(--st-font); color: #eaf3f8; letter-spacing: .05em; margin-top: 3px; }
+.board-hint { position: absolute; left: 50%; top: 40%; transform: translate(-50%, calc(-100% - 10px)); font: 700 clamp(11px, 1.35vw, 15px) var(--st-font); color: #1b1510; background: #ffd45a; border: 3px solid #1b1510; padding: 3px 10px; cursor: pointer; white-space: nowrap; box-shadow: 0 3px 0 #1b1510; animation: st-bob 1.4s ease-in-out infinite; min-height: 0; }
+.board-hint::after { content: ""; position: absolute; left: 50%; bottom: -10px; margin-left: -6px; border: 6px solid transparent; border-top-color: #1b1510; border-bottom: 0; }
+.board-hint[hidden] { display: none; }
+@keyframes st-bob { 50% { margin-top: -4px; } }
+.out-controls { position: absolute; left: 10px; bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px; right: 10px; pointer-events: none; }
+.out-controls .st-btn { pointer-events: auto; font-size: 12px; padding: 3px 9px; min-height: 30px; background: rgba(255, 248, 234, .92); color: #2b2116; }
+.out-controls .st-btn[aria-pressed="true"] { background: #ffd45a; }
+.st-loading { position: absolute; inset: 0; display: grid; place-items: center; font: 700 18px var(--st-font); color: #fffaf0; background: #2b4a5a; pointer-events: none; transition: opacity .4s; z-index: 2; }
+.st-loading[hidden] { display: none; }
+.st-nogl { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); z-index: 3; font: 600 11px var(--st-font); color: #fffaf0; background: rgba(20, 16, 12, .8); padding: 2px 8px; pointer-events: none; white-space: nowrap; }
+#st-fade { position: absolute; inset: 0; z-index: 9; background: #0b1a20; opacity: 0; pointer-events: none; transition: opacity .35s; }
+
+/* dialogs: same paper-ticket look as the ramen order card */
+.st-order { z-index: 7; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(460px, calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto; background: var(--st-paper); color: var(--st-text); border: 4px solid var(--st-ink); box-shadow: inset 0 0 0 3px var(--st-paper2), 0 6px 0 rgba(20, 14, 8, .45); padding: 0 16px 16px; font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.st-order[hidden] { display: none; }
+.st-order-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 0 -16px 12px; padding: 8px 12px 8px 16px; background: var(--st-accent); color: #fff8ea; font: 700 16px var(--st-font); position: sticky; top: 0; z-index: 1; }
+.st-order-top b { overflow-wrap: anywhere; }
+.st-order .x { font: 700 15px var(--st-font); background: transparent; color: #fff8ea; border: 0; cursor: pointer; padding: 2px 6px; min-width: 32px; min-height: 32px; }
+.st-order form { display: grid; gap: 10px; }
+.st-order form[hidden] { display: none; }
+.st-order label { font: 700 15px var(--st-font); }
+.st-order textarea { font: 500 15px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--st-text); background: var(--st-cream); border: 3px solid var(--st-ink); padding: 8px 10px; resize: vertical; min-height: 72px; width: 100%; box-sizing: border-box; }
+.st-order .st-btn { justify-self: start; }
+.st-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.st-note { margin: 0; font-size: 12.5px; color: var(--st-muted); }
+.st-sum { margin: 0; font: 700 16px var(--st-font); overflow-wrap: anywhere; }
+.st-req { margin: 0; font-size: 13px; color: var(--st-muted); overflow-wrap: anywhere; }
+.st-out { display: grid; gap: 10px; }
+.st-out[hidden] { display: none; }
+.st-out ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.st-out li { font-size: 14px; background: var(--st-cream); border-left: 4px solid var(--st-accent); padding: 4px 8px; display: grid; grid-template-columns: auto 1fr auto; gap: 2px 8px; align-items: baseline; }
+.st-out li b { font-family: var(--st-font); }
+.st-pill { font: 700 11px var(--st-font); padding: 0 6px; border: 2px solid var(--st-ink); background: #e9e4da; color: #1b1510; white-space: nowrap; }
+.st-pill.ok { background: #bfe3a8; } .st-pill.needs_you { background: #ffb8a8; } .st-pill.running { background: #ffe08a; } .st-pill.idle { background: #e1e3e6; }
+.st-out code { display: block; font: 12.5px/1.45 var(--st-font); background: var(--st-code); padding: 8px 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 12px; font-size: 13.5px; }
+.st-dl dt { font: 600 10.5px var(--st-font); letter-spacing: .1em; text-transform: uppercase; color: var(--st-muted); padding-top: 2px; }
+.st-dl dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.st-role { margin: 0 0 10px; color: var(--st-muted); font-size: 13.5px; }
+.st-log { margin: 0; padding-left: 16px; font-size: 13px; display: grid; gap: 3px; }
+.st-log time { font: 600 11px var(--st-font); color: var(--st-muted); margin-right: 6px; }
+
+/* phones: dialogs become a sheet pinned to the bottom of the screen, like ramen's order card under the kitchen */
+@media (max-width: 700px) {
+  .stage { width: 100%; margin-top: 0; border-width: 0 0 4px; border-radius: 0; box-shadow: none; }
+  .st-order { position: fixed; left: 0; right: 0; top: auto; bottom: 0; transform: none; width: auto; max-height: 72vh; border-width: 4px 0 0; box-shadow: 0 -6px 0 rgba(20, 14, 8, .25); padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+  .out-title small { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .board-hint, .st-tag[data-state="running"]::before { animation: none; }
+  #st-fade, .st-loading { transition: none; }
+}
