@@ -1,11 +1,14 @@
 {
-  "updatedAt": "2026-10-18T17:10:21+00:00",
+  "updatedAt": "2026-10-18T18:57:44+00:00",
   "week": "2026-43",
   "settings": {
     "cadence_per_week": 7,
     "post_time": "18:00",
     "tz": "America/Chicago",
-    "house_styles": [],
+    "house_styles": [
+      "clay",
+      "blueprint"
+    ],
     "voice": null,
     "targets": {
       "hold3s": 0.6,
@@ -13,7 +16,7 @@
       "saves_per_view": 0.05,
       "shares_saves_per_1k": 10,
       "my_minutes_per_video": 4,
-      "usd_per_video": 1.0,
+      "usd_per_video": 1,
       "first_pass_approval": 0.7
     }
   },
@@ -89,7 +92,7 @@
       "title": "What happens when you reel up a bass from 30 feet?",
       "angle": "Barotrauma: swim bladder swells; a descending device sends it back down (format-bible sample, now fact-checked).",
       "format": "what-happens-if",
-      "score": 9.0,
+      "score": 9,
       "scores": {
         "curiosity": 9,
         "visual": 9,
@@ -137,7 +140,7 @@
       "title": "What happens if a fish swallows your hook?",
       "angle": "Inside-the-throat reveal; cut-the-line beats digging the hook out (bluegill study).",
       "format": "what-happens-if",
-      "score": 8.0,
+      "score": 8,
       "scores": {
         "curiosity": 8,
         "visual": 8,
@@ -208,7 +211,7 @@
       "title": "10 largemouth bass facts in under 30 seconds",
       "angle": "Agency species-profile facts: jaw, fry, egg counts, dad guards nest, record.",
       "format": "ten-facts",
-      "score": 8.0,
+      "score": 8,
       "scores": {
         "curiosity": 7,
         "visual": 8,
@@ -236,7 +239,7 @@
       "title": "10 smallmouth bass facts in under 30 seconds",
       "angle": "Name origins, vertical bars, nests, hatch speed, 1955 world record.",
       "format": "ten-facts",
-      "score": 8.0,
+      "score": 8,
       "scores": {
         "curiosity": 7,
         "visual": 8,
@@ -262,7 +265,7 @@
       "title": "Inside a bass's ear: the stone that tells its age",
       "angle": "Body-inside reveal of otoliths with yearly rings.",
       "format": "what-happens-if",
-      "score": 8.0,
+      "score": 8,
       "scores": {
         "curiosity": 8,
         "visual": 9,
@@ -276,7 +279,7 @@
       "title": "What happens when your crankbait rattles past a bass?",
       "angle": "Lateral line senses vibration before the bass sees the lure.",
       "format": "what-happens-if",
-      "score": 7.0,
+      "score": 7,
       "scores": {
         "curiosity": 7,
         "visual": 8,
@@ -304,7 +307,7 @@
       "title": "You've been calling the wrong fish a largemouth",
       "angle": "Northern vs Florida largemouth naming change (Micropterus nigricans); taxonomy needs a primary source.",
       "format": "what-happens-if",
-      "score": 6.0,
+      "score": 6,
       "scores": {
         "curiosity": 7,
         "visual": 6,
@@ -318,7 +321,7 @@
       "title": "What happens if you dump bass into a new lake?",
       "angle": "Illegal stocking and its effects on native fish; needs agency case studies.",
       "format": "what-happens-if",
-      "score": 6.0,
+      "score": 6,
       "scores": {
         "curiosity": 6,
         "visual": 6,
@@ -332,7 +335,7 @@
       "title": "What happens to a bass when the lake ices over?",
       "angle": "Cold-water metabolism slowdown; sources are general, numbers vary.",
       "format": "what-happens-if",
-      "score": 6.0,
+      "score": 6,
       "scores": {
         "curiosity": 6,
         "visual": 7,
